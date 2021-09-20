@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import AccountPage from '../../screens/AccountPage/AccountPage';
 
 
-const MapComponent = () => {
+const MapComponent = props => {
     return ( 
         <View style={styles.container}>
             
@@ -32,7 +32,7 @@ const MapComponent = () => {
         
         
             </MapView>
-            <TouchableOpacity style={styles.overlay} onPress={() => navigation.navigate(AccountPage)}>
+            <TouchableOpacity style={styles.overlay} onPress={() => props.navigation.navigate(AccountPage)}>
               <Icon name='menu' size={35} color='white'></Icon>
             </TouchableOpacity>
 
