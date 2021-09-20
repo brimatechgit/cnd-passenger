@@ -11,7 +11,7 @@ import MapComponent from '../../compnents/MapComponent/MapComponent';
 const HomePage = ({navigation, props}) => {
     return ( 
         <View >
-            <MapComponent></MapComponent>
+            <MapComponent navigation={navigation}></MapComponent>
            
             <BottomHomeNav navigation={navigation}></BottomHomeNav>
 

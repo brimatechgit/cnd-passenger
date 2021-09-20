@@ -24,6 +24,10 @@ import AccountSettings from './src/screens/AccountPage/AccountSettings/AccountSe
 import SupportPage from './src/screens/AccountPage/SupportPage/SupportPage';
 import ConfirmPickUpPage from './src/screens/SummaryPage/CardDetails/ConfirmPickUpPage/ConfirmPickUpPage';
 import ConnectDriverPage from './src/screens/SummaryPage/CardDetails/ConfirmPickUpPage/ConnectDriverPage/ConnectDriverPage';
+import AccountCardDetailsPage from './src/screens/AccountPage/AccountCardDetails/AccountCardDetails';
+import PromotionPage from './src/screens/AccountPage/Promotions/PromotionPage';
+import AboutPage from './src/screens/AccountPage/AboutPage/AboutPage';
+import ChangePassword from './src/screens/AccountPage/ChangePassword/ChangePassword';
 
 
 const Stack = createNativeStackNavigator();
@@ -54,6 +58,10 @@ export default function App() {
         <Stack.Screen name="DropOffInstructions" component={DropOffInstructions} />
         <Stack.Screen name="ConfirmPickUpPage" component={ConfirmPickUpPage} />
         <Stack.Screen name="ConnectDriverPage" component={ConnectDriverPage} />
+        <Stack.Screen name="AccountCardDetailsPage" component={AccountCardDetailsPage} />
+        <Stack.Screen name="PromotionPage" component={PromotionPage} />
+        <Stack.Screen name="AboutPage" component={AboutPage} />
+        <Stack.Screen name="ChangePassword" component={ChangePassword} />
         <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={AccountPage} />
       </Stack.Navigator>
     </NavigationContainer>

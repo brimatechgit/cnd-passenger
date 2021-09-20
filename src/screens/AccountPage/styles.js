@@ -30,7 +30,13 @@ const styles = StyleSheet.create({
    },
 
    text: {
-      fontSize: 18
+      fontSize: 18,
+      color: 'teal'
+   },
+
+   icon: {
+      fontSize: 32,
+      color: 'teal',
    }
 
 });
