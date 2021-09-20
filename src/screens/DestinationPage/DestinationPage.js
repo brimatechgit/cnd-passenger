@@ -6,6 +6,7 @@ import  {useNavigation}  from '@react-navigation/native';
 import styles from './styles.js';
 import PlaceRow from "./PlaceRow";
 import PickUpLocationDetails from './PickUpDetails/PickUpDetails.js';
+import ConfirmPage from './ConfirmPage/ConfirmPage.js';
 
 const homePlace =  {
   description: 'Home',
@@ -40,7 +41,7 @@ const DestinationSearch = (props) => {
   return (
     <SafeAreaView>
 <View style={{alignItems: 'center', top: '60%'}}>
-<TouchableOpacity onPress={() => navigation.navigate(PickUpLocationDetails)} style={styles.button}>
+<TouchableOpacity onPress={() => navigation.navigate(ConfirmPage)} style={styles.button}>
                         
                         <Text style={{color: 'teal', fontSize: 15}}>Continue</Text>
                     
