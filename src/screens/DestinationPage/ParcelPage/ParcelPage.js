@@ -6,52 +6,19 @@ import MapView,  {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import {Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
+import ParcelMapComponent from '../../../compnents/ParcelMap/ParcelMapComponent';
+import BottomHomeNav from '../../../compnents/BottomHomeNav/BottomHomeNav';
 
 
-const ParcelPage = () => {
+const ParcelPage = ({navigation}) => {
     return ( 
         <View>
 
-            <View>
-                <MapView style={styles.map} 
-                
-                style={{width: '100%', height: '100%'}}
-        provider={PROVIDER_GOOGLE}
-        showsUserLocation={true}
-        initialRegion={{ 
-            latitude: -26.16299249170051,
-            longitude: 28.225375324978117,
-            latitudeDelta: 0.0222,
-            longitudeDelta: 0.0121,
-        }}
-                >
-
-            <Marker
-            coordinate={{
-                latitude: -26.16299249170051,
-                longitude: 28.225375324978117,}}
-            ></Marker>
-
+            <ParcelMapComponent navigation={navigation}></ParcelMapComponent>
             
-            
-                </MapView>
-                <TouchableOpacity style={styles.overlay} onPress={() => props.navigation.navigate(AccountPage)}>
-                <Icon name='menu' size={35} color='white'></Icon>
-                </TouchableOpacity>
-                <View style={{alignItems: 'center'}}>
-                    <Card style={{elevation: 5, borderRadius: 25, padding:2, width: '85%', margin: 5}}>
-                            <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
+            <RequestCard navigation={navigation}></RequestCard>
 
-                            <View style={styles.circle} />
-
-                            <Text style={{color:'teal', fontSize: 17, fontWeight: 'bold', paddingLeft: 10}}>453 Unicon Villy</Text>
-                               
-                            </View>
-                    </Card>
-                </View>
-            </View>
-            
-        <RequestCard></RequestCard>
+            {/* <BottomHomeNav></BottomHomeNav> */}
         </View>
      );
 }

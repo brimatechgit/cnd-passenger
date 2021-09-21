@@ -113,11 +113,11 @@ const DestinationSearch = (props) => {
         <View style={styles.square} />
 
       </View>
-                    <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
+                    {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.buttonBig} onPress={() => props.navigation.navigate(PickUpLocationDetails)}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
-                    </View>
+                    </View> */}
     </SafeAreaView>
   );
 };
