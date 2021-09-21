@@ -1,5 +1,4 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create ({
     container: {
@@ -53,6 +52,30 @@ const styles = StyleSheet.create ({
         borderWidth: 1,
         zIndex: 0.5,
     },
+
+    map: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
+      },
+      overlay: {
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        borderRadius: 50,
+        margin: 5,
+        backgroundColor: 'teal',
+      },
+      overlay2: {
+          width: 55,
+          height: 55,
+          alignItems: 'center',
+          justifyContent: 'center',
+        position: 'absolute',
+        left: '82%',
+        bottom: '5%',
+        borderRadius: 50,
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+      },
 })
  
 export default styles;

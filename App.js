@@ -28,6 +28,8 @@ import AccountCardDetailsPage from './src/screens/AccountPage/AccountCardDetails
 import PromotionPage from './src/screens/AccountPage/Promotions/PromotionPage';
 import AboutPage from './src/screens/AccountPage/AboutPage/AboutPage';
 import ChangePassword from './src/screens/AccountPage/ChangePassword/ChangePassword';
+import ConfirmPage from './src/screens/DestinationPage/ConfirmPage/ConfirmPage';
+import ParcelPage from './src/screens/DestinationPage/ParcelPage/ParcelPage';
 
 
 const Stack = createNativeStackNavigator();
@@ -57,6 +59,8 @@ export default function App() {
         <Stack.Screen name="PickUpInstructions" component={PickUpInstructions} />
         <Stack.Screen name="DropOffInstructions" component={DropOffInstructions} />
         <Stack.Screen name="ConfirmPickUpPage" component={ConfirmPickUpPage} />
+        <Stack.Screen name="ConfirmPage" component={ConfirmPage} />
+        <Stack.Screen name="ParcelPage" component={ParcelPage} />
         <Stack.Screen name="ConnectDriverPage" component={ConnectDriverPage} />
         <Stack.Screen name="AccountCardDetailsPage" component={AccountCardDetailsPage} />
         <Stack.Screen name="PromotionPage" component={PromotionPage} />

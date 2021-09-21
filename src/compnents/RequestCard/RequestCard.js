@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Pressable  } from 'react-native';
-import Card from 'react-native-paper';
+import {Card} from 'react-native-paper';
 
 
 const RequestCard = () => {

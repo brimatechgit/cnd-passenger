@@ -6,6 +6,7 @@ import styles from './styles';
 import Icon  from 'react-native-vector-icons/Ionicons';
 import DropOffInstruction from './DropOffInstructions/DropOffInstructions';
 import SummaryPage from '../../SummaryPage/SummaryPage';
+import ParcelPage from '../ParcelPage/ParcelPage';
 
 const DropOffDetails = props => {
 
@@ -126,7 +127,7 @@ const DropOffDetails = props => {
 
                 <View style={{height: 35}}></View>
                     <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
-                        <Pressable style={styles.button} onPress={() => props.navigation.navigate(SummaryPage)}>
+                        <Pressable style={styles.button} onPress={() => props.navigation.navigate(ParcelPage)}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
                     </View>
