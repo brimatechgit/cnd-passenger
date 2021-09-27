@@ -8,25 +8,35 @@ const styles = StyleSheet.create({
 
     main: {
         position: 'absolute',
-        justifyContent: 'center',
         alignItems: 'center',
         left: 25,
-        top: 10
-       
+        top: 10,
+        width: '90%'
     },
     subMain: {
 
     },
-    form: {
-        
+    list: {
+        padding: 10
     },
     textCard: {
         elevation: 25,
         alignItems: 'center',
         borderRadius: 50,
         backgroundColor: 'white',
-        width: 310,
+        width: '100%',
         paddingLeft: 5,
+        height: 65,
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    detailsTextCard: {
+        
+        bottom: 20,
+        elevation: 12,
+        alignItems: 'center',
+        borderRadius: 50,
+        backgroundColor: 'white',
         height: 65,
         justifyContent: 'center',
         flexDirection: 'row'
@@ -46,17 +56,15 @@ const styles = StyleSheet.create({
         backgroundColor: 'black'
     },
     iconCircle: {
-        position: 'absolute',
-        right: 12,
-        top: 10,
-        height: 25,
-        width: 25,
+        height: 45,
+        width: 45,
         borderRadius: 50,
         borderWidth: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'black',
-        elevation: 2
+        backgroundColor: 'white',
+        borderColor: 'white',
+        elevation: 4
     },
     input: {
         borderBottomColor: 'black',
@@ -73,7 +81,7 @@ const styles = StyleSheet.create({
         width: 150,
         padding: 5
     },
-    text: {
+    bankingText: {
         fontSize: 20, justifyContent: 'center',
         padding: 5
     },
@@ -81,55 +89,31 @@ const styles = StyleSheet.create({
         flexDirection: 'row', justifyContent: 'space-between'
     },
     button: {
-        elevation: 5,
-        backgroundColor: 'white',
+        backgroundColor: 'red',
         borderRadius: 50,
         height: 45,
-        width: 160,
+        width: '60%',
         alignItems: 'center',
-        justifyContent: 'center',
-        borderColor:'teal',
-        borderWidth: 1
-
+        justifyContent: 'space-between',
+        borderColor: 'black',
+        borderWidth:1,
+        flexDirection: 'row',
+        padding: 10,
+        paddingVertical:10,
         
     },
-
-    inputBottom: {
-        padding: 5,
-        margin: 5,
-        justifyContent: 'flex-start'
+    rowView: {
+        padding: 5
     },
 
-    dropdown: {
-        borderWidth: 1,
-    },
-
-    title: {
-        fontSize: 22,
-        fontWeight: '600',
-        color: 'teal'
-    },
-
-    subTitle: {
+    radioText: {
+        fontWeight: 'bold',
+        color: 'teal',
+        alignItems: 'center',
         fontSize: 15,
-        color: 'teal'
+        paddingVertical: 5
     },
-
-    promoCard: {
-        elevation: 10, borderRadius: 25, padding:15, margin: 6
-    },
-
-    icon: {
-        
-    }, 
-    parcelText: {
-        fontWeight:'bold',paddingTop: 5
-    },
-
-    textView: {
-        justifyContent:'space-between', flexDirection:'row', padding: 10
-    }
 
 })
 
-export default styles;
+export default styles

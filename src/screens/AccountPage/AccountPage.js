@@ -2,11 +2,14 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Pressable } from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
 import AboutPage from './AboutPage/AboutPage';
 import AccountCardDetailsPage from './AccountCardDetails/AccountCardDetails';
 import ChangePassword from './ChangePassword/ChangePassword';
+import HistoryPage from './HistoryPage/HistoryPage';
 import PromotionPage from './Promotions/PromotionPage';
+import SafetyPage from './Safety Centre/SafetyPage';
 // import { FAB } from 'react-native-paper';
 import styles from './styles';
 
@@ -30,19 +33,19 @@ const AccountPage = props => {
                 <View>
 
 
-                <TouchableOpacity onPress={() => props.navigation.navigate(AccountCardDetailsPage)}>
+                <Pressable onPress={() => props.navigation.navigate(AccountCardDetailsPage)}>
                     <Card style={{elevation: 10, paddingVertical: 10}}>
 
                         <View style={{flexDirection: 'row'}}>
 
-                    <View style={styles.leadIcon}><MIcon name="approval" size={30}></MIcon></View>
+                    <View style={styles.leadIcon}><Icon name="card" size={30}></Icon></View>
                         <View style={styles.textContainer}>
 
-                        <Text style={styles.text}>Card Payments</Text>
+                        <Text style={styles.text}>Payment Method</Text>
                         </View>
                         </View>
                     </Card>
-                </TouchableOpacity>
+                </Pressable>
 
                     <View style={{padding: 5, flexDirection: 'row', elevation: 10, justifyContent: 'space-between'}}>
                         <View style={styles.leadIcon}><MIcon name="support-agent" size={30}></MIcon></View>
@@ -59,7 +62,7 @@ const AccountPage = props => {
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>History</Text>
-                        <View style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></View>
+                        <Pressable onPress={() => props.navigation.navigate(HistoryPage)} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
                         </View>
                     </View>
                     <View style={{padding: 5, flexDirection: 'row', elevation: 10}}>
@@ -84,6 +87,29 @@ const AccountPage = props => {
 
                         <Text style={styles.text}>Invite Friends</Text>
                         <Pressable onPress={() => props.navigation.navigate(PromotionPage)} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                        </View>
+                    </View>
+                    <View style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                        <View style={styles.leadIcon}><MaterialIcons name="support-agent" size={30}></MaterialIcons></View>
+                        <View style={styles.textContainer}>
+
+                        <Text style={styles.text}>Support</Text>
+                        <Pressable onPress={() => props.navigation.navigate()} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                        </View>
+                    </View>
+                    <View style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                        <View style={styles.leadIcon}><Icon name="shield" size={30}></Icon></View>
+                        <View style={styles.textContainer}>
+
+                        <Text style={styles.text}>Safety Centre</Text>
+                        <Pressable onPress={() => props.navigation.navigate(SafetyPage)} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                        </View>
+                    </View>
+                    <View style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                        <View style={styles.leadIcon}><Icon name="log-out" size={30} color='red'></Icon></View>
+                        <View style={styles.textContainer}>
+
+                        <Text style={styles.text}>Log out</Text>
                         </View>
                     </View>
                 </View>

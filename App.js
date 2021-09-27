@@ -30,6 +30,9 @@ import AboutPage from './src/screens/AccountPage/AboutPage/AboutPage';
 import ChangePassword from './src/screens/AccountPage/ChangePassword/ChangePassword';
 import ConfirmPage from './src/screens/DestinationPage/ConfirmPage/ConfirmPage';
 import ParcelPage from './src/screens/DestinationPage/ParcelPage/ParcelPage';
+import HistoryPage from './src/screens/AccountPage/HistoryPage/HistoryPage';
+import PromoPage from './src/screens/AccountPage/Promotions/PromoPage';
+import SafetyPage from './src/screens/AccountPage/Safety Centre/SafetyPage';
 
 
 const Stack = createNativeStackNavigator();
@@ -38,7 +41,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="ParcelPage"
+      initialRouteName="LandingPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}
@@ -51,6 +54,7 @@ export default function App() {
         <Stack.Screen name="HomePage" component={HomePage} />
         <Stack.Screen name="TermsPage" component={TermsPage} />
         <Stack.Screen name="TermsAndCo" component={TermsAndCo} />
+        <Stack.Screen name="SafetyPage" component={SafetyPage} />
         <Stack.Screen name="DestinationSearch" component={DestinationSearch} />
         <Stack.Screen name="CardDetailsPage" component={CardDetailsPage} />
         <Stack.Screen name="SummaryPage" component={SummaryPage} />
@@ -62,9 +66,12 @@ export default function App() {
         <Stack.Screen name="ConfirmPage" component={ConfirmPage} />
         <Stack.Screen name="ParcelPage" component={ParcelPage} />
         <Stack.Screen name="ConnectDriverPage" component={ConnectDriverPage} />
+        <Stack.Screen name="SupportPage" component={SupportPage} />
+        <Stack.Screen name="HistoryPage" component={HistoryPage} />
         <Stack.Screen name="AccountCardDetailsPage" component={AccountCardDetailsPage} />
         <Stack.Screen name="PromotionPage" component={PromotionPage} />
         <Stack.Screen name="AboutPage" component={AboutPage} />
+        <Stack.Screen name="PromoPage" component={PromoPage} />
         <Stack.Screen name="ChangePassword" component={ChangePassword} />
         <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={AccountPage} />
       </Stack.Navigator>

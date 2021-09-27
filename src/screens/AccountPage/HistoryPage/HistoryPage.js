@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,  } from 'react-native';
+import { View, Text, Pressable, TouchableOpacity } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -20,49 +20,52 @@ const HistoryPage = () => {
                         </View>
                 </Card>
 
-                <View style={{justifyContent:'space-between', flexDirection:'row'}}>
+                <View style={styles.textView}>
                     <View>
                         <Text>2021/09/18</Text>
-                        <Text>Parcel Delivery</Text>
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
                         <Text>Friday - 12:41</Text>
                     </View>
 
-                    <Pressable onPress={() => console.log('hi')} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                    <Pressable onPress={() => console.log('hi')} style={{ justifyContent:'center'}}><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
                 </View>
-                <View style={{justifyContent:'space-between', flexDirection:'row'}}>
+                <View style={styles.textView}>
                     <View>
                         <Text>2021/09/18</Text>
-                        <Text>Parcel Delivery</Text>
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
                         <Text>Friday - 12:41</Text>
                     </View>
 
-                    <Pressable onPress={() => console.log('hi')} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                    <Pressable onPress={() => console.log('hi')} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
                 </View>
-                <View style={{justifyContent:'space-between', flexDirection:'row'}}>
+                <View style={styles.textView}>
                     <View>
                         <Text>2021/09/18</Text>
-                        <Text>Parcel Delivery</Text>
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
                         <Text>Friday - 12:41</Text>
                     </View>
 
-                    <Pressable onPress={() => console.log('hi')} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                    <Pressable onPress={() => console.log('hi')} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
                 </View>
-                <View style={{justifyContent:'space-between', flexDirection:'row'}}>
+                <View style={styles.textView}>
                     <View>
                         <Text>2021/09/18</Text>
-                        <Text>Parcel Delivery</Text>
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
                         <Text>Friday - 12:41</Text>
                     </View>
 
-                    <Pressable onPress={() => console.log('hi')} style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
+                    <Pressable onPress={() => console.log('hi')} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
                 </View>
             </View>
 
-            <TouchableOpacity onPress={() => console.log('navi')} style={styles.button}>
-                    {/* navigation.navigate(DestinationSearch) */}
-                            <Text style={{color: 'teal', fontSize: 15}}>Show More</Text>
-                        
-                    </TouchableOpacity>
+
+            <View style={{alignItems:'center'}}>
+                <TouchableOpacity onPress={() => console.log('navi')} style={styles.button}>
+                        {/* navigation.navigate(DestinationSearch) */}
+                                <Text style={{color: 'teal', fontSize: 15}}>Show More</Text>
+                            
+                        </TouchableOpacity>
+            </View>
 
 
         </View>

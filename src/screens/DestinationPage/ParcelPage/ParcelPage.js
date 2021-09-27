@@ -7,7 +7,6 @@ import {Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import ParcelMapComponent from '../../../compnents/ParcelMap/ParcelMapComponent';
-import BottomHomeNav from '../../../compnents/BottomHomeNav/BottomHomeNav';
 
 
 const ParcelPage = ({navigation}) => {

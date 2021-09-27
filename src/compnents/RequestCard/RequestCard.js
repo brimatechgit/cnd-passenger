@@ -101,7 +101,11 @@ const RequestCard = props => {
                                 <View style={{padding: 10}}>
                                     <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10}}>Is your Package Ready?</Text>
                                     <Text>{deliText}</Text>
-                                    <Text>Package Delivery <Pressable style={{ justifyContent: 'center', top: 5}}><Text style={{color:'teal',}}>Terms & Conditions</Text></Pressable></Text>
+                                    <View style={{flexDirection:'row', paddingTop:10}}>
+                                        <Text>Package Delivery </Text> 
+                                        <Pressable style={{ justifyContent: 'center'}}><Text style={{color:'teal',}}>Terms & Conditions</Text></Pressable>
+
+                                    </View>
                                 
                                 
                                 </View>

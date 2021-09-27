@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,TextInput } from 'react-native';
+import { View, Text,TextInput, TouchableOpacity } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -12,7 +12,7 @@ const ChangePassword = () => {
 
 
     return ( 
-        <View>
+        <View style={{padding: 10}}>
             <View style={{alignItems:'center', padding: 15}}>
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Change Password</Text>
             </View>
@@ -43,7 +43,7 @@ const ChangePassword = () => {
             </View>
             <View>
                 <Text style={{fontWeight:'100', padding: 5}}>Enter your new password</Text>
-                    <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                    <Card style={{elevation: 10, borderRadius: 25, padding:2, marginVertical: 10}}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                             <TextInput
                                     style={styles.inputBottom}
@@ -63,7 +63,7 @@ const ChangePassword = () => {
                                 
                             </View>
                     </Card>
-                    <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                    <Card style={{elevation: 10, borderRadius: 25, padding:2, marginVertical: 10}}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                             <TextInput
                                     style={styles.inputBottom}
