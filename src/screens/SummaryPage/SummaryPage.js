@@ -21,27 +21,8 @@ const SummaryPage = props => {
 
             <View>
 
-            <Card style={{height: 530,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
-                <Text>To be Charged</Text>
-                <Text style={{color: 'teal', fontSize: 17}}>Amount to be paid</Text>
-                <View style={{height: 15}}></View>
-
-                <View style={styles.rowView}>
-                    <Text style={styles.subTitle}>Base fare</Text>
-                    <Text style={styles.subTitle}>R3</Text>
-                </View>
-                <View style={styles.rowView}>
-                    <Text style={styles.subTitle}>Distance </Text>
-                    <Text style={styles.subTitle}>R3</Text>
-                </View>
-                <View style={styles.rowView}>
-                    <Text style={styles.subTitle}>Time</Text>
-                    <Text style={styles.subTitle}>R3</Text>
-                </View>
-                <View style={styles.rowView}>
-                    <Text style={styles.subTitle}>Booking fee</Text>
-                    <Text style={styles.subTitle}>R3</Text>
-                </View>
+            <Card style={{height: 300,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
+                
 
                 <View style={{height: 20}}></View> 
                 <View style={styles.rowView}>
@@ -49,35 +30,31 @@ const SummaryPage = props => {
                     <Text style={styles.subTitle}>R60</Text>
                 </View>
 
-                <View style={{height: 15}}></View>
-                <View style={{flexDirection: 'row'}}>
-                    <View></View>
-                    <Text>Pick up Address</Text>
-                </View>
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={{color: 'teal', fontSize: 17}}>234 Brima Road, Villy estate 219</Text>
+                <View>
+                    <View style={{height: 15}}></View>
+                    <View style={{flexDirection: 'row', alignItems:'center'}}>
+                        <View style={{backgroundColor: 'teal', borderRadius: 100, marginHorizontal: 5, width: 8, height: 8}}></View>
+                        <Text>Pick up Address</Text>
+                    </View>
+                    <View style={{flexDirection: 'row'}}>
+                        <Text style={{color: 'teal', fontSize: 17}}>234 Brima Road, Villy estate 219</Text>
+                    </View>
                 </View>
 
-                <View style={{height: 15}}></View>
-                <View style={{flexDirection: 'row'}}>
-                    <View></View>
-                    <Text>Drop Off Address</Text>
+
+                <View>
+                    <View style={{height: 15}}></View>
+                    <View style={{flexDirection: 'row', alignItems:'center'}}>
+                    <View style={{backgroundColor: 'teal', borderRadius: 100, marginHorizontal: 5, width: 8, height: 8}}></View>
+                        <Text>Drop Off Address</Text>
+                    </View>
+                    <View style={{flexDirection: 'row'}}>
+                        <Text style={{color: 'teal', fontSize: 17}}>5 Marlin Rd, Jet Park, Boksburg, 145</Text>
+                    </View>
                 </View>
-                <View style={{flexDirection: 'row'}}>
-                    <Text style={{color: 'teal', fontSize: 17}}>5 Marlin Rd, Jet Park, Boksburg, 145</Text>
-                </View>
+
 
                 <View style={{height: 25}}></View>
-
-
-                <View style={styles.rowView}>
-                    <Text style={{color: 'teal', fontSize: 17}}>Distance</Text>
-                    <Text style={styles.subTitle}>5KM</Text>
-                </View>
-                <View style={styles.rowView}>
-                    <Text style={{color: 'teal', fontSize: 17}}>Duration</Text>
-                    <Text style={styles.subTitle}>00:50</Text>
-                </View>
 
 
                 <View style={styles.rowView}>
@@ -101,7 +78,11 @@ const SummaryPage = props => {
 
                 <View style={{height: 20}}></View>
 
-                <View style={{...styles.rowView, padding: 10}}>
+                
+            </Card>
+
+
+            <View style={{...styles.rowView, padding: 10, paddingVertical: 25}}>
                     <Card style={{...styles.circularIcon, width: 45, height: 45}}>
                         <View style={{justifyContent: 'center', alignItems: 'center', top: 6}}>
 
@@ -121,15 +102,14 @@ const SummaryPage = props => {
                     
                     </Card>
                 </View>
-            </Card>
 
 
-                <View style={{height: 35}}></View>
+                {/* <View style={{height: 35}}></View>
                     <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.button} onPress={() => props.navigation.navigate(CardDetailsPage)}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
-                    </View>
+                    </View> */}
             </View>
         </View>
      );

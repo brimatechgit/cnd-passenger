@@ -38,7 +38,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="LandingPage"
+      initialRouteName="ParcelPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}

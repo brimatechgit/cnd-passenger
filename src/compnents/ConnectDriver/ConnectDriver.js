@@ -24,10 +24,15 @@ const ConnectDriver = () => {
                         <View style={styles.leadIcon}><Icon name="person" size={30}></Icon></View>
                         <Text>Drivers Name</Text>      
                     </View>
-                    <View style={{width: '25%'}}></View>
+                    <View style={{width: '10%'}}></View>
                     <View style={{flexDirection:'column'}}>
                         <View style={styles.leadIcon}><Icon name="close" color='red' size={30}></Icon></View>
                         <Text>Cancel Pick Up</Text>      
+                    </View>
+                    <View style={{width: '10%'}}></View>
+                    <View style={{flexDirection:'column', alignItems:'center'}}>
+                        <View style={[styles.leadIcon, {left: 0}]}><Icon name="md-chatbubbles" color='teal' size={30}></Icon></View>
+                        <Text>Chat</Text>      
                     </View>
             </View>
             
