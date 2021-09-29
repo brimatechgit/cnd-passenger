@@ -2,11 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {View, TextInput, SafeAreaView, Text, Pressable, TouchableOpacity} from 'react-native';
 import  {GooglePlacesAutocomplete}  from 'react-native-google-places-autocomplete';
 import  {useNavigation}  from '@react-navigation/native';
-
+import IconIonic from 'react-native-vector-icons/Ionicons';
 import styles from './styles.js';
 import PlaceRow from "./PlaceRow";
 import PickUpLocationDetails from './PickUpDetails/PickUpDetails.js';
 import ConfirmPage from './ConfirmPage/ConfirmPage.js';
+import { Card } from 'react-native-paper';
+import SetAddress from './SetAddress.js';
 
 const homePlace =  {
   description: 'Home',
@@ -40,6 +42,33 @@ const DestinationSearch = (props) => {
 
   return (
     <SafeAreaView>
+
+    <View style={{position:'absolute', top: '25%', padding: 10}}>
+      <View style={{flexDirection: 'row'}}>
+        <Pressable onPress={() => props.navigation.navigate(SetAddress)} style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
+          <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
+            <IconIonic name='home' color='teal' size={22}></IconIonic>
+          </Card>
+            <Text style={{color:'teal'}}>Home</Text>
+        </Pressable>
+        <Pressable onPress={() => props.navigation.navigate(SetAddress)} style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
+          <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
+            <IconIonic name='briefcase' color='red' size={22}></IconIonic>
+          </Card>
+            <Text style={{color:'teal'}}> Work</Text>
+        </Pressable>
+      </View>
+      
+      <View style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
+          <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
+            <IconIonic name='search' color='teal' size={22}></IconIonic>
+          </Card>
+            <Text style={{color:'teal'}}>Choose on the map</Text>
+        </View>
+
+      </View>
+
+
 <View style={{alignItems: 'center', top: '60%'}}>
 <TouchableOpacity onPress={() => navigation.navigate(ConfirmPage)} style={styles.button}>
                         
@@ -49,7 +78,7 @@ const DestinationSearch = (props) => {
 
           </View>
       <View style={{padding: 10}}>
-        <Text style={{color: 'teal', fontSize: 22, fontWeight: '600'}}>Select Destination</Text>
+        <Text style={{color: 'teal', fontSize: 22, fontWeight: 'bold'}}>Set Pick Up</Text>
 
       </View>
         
@@ -81,6 +110,7 @@ const DestinationSearch = (props) => {
         />
 
         <GooglePlacesAutocomplete
+        
           placeholder="Where to?"
           onPress={(data, details = null) => {
             setDestinationPlace({data, details});

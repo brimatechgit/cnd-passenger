@@ -94,11 +94,12 @@ const Verification = props => {
             </View>
             
             <View style={{height: 15}}></View>
-            <View style={{ elevation: 5, width: '45%'}}>
-                        <Pressable style={styles.button} onPress={() => console.log('sign in')}>
+            <Card style={styles.button} onPress={() => console.log('sign in')}>
+                      
                             <Text style={{color: 'teal', fontSize: 15}}>Resend Code</Text>
-                        </Pressable>
-                </View>
+                        
+                {/* <Button text='Resend Code' navPage='' navigation={props.navigation}></Button> */}
+                </Card>
                 <View style={{height: 35}}></View>
                     {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.buttonBig} onPress={() => props.navigation.navigate(HomePage)}>

@@ -51,7 +51,7 @@ const styles = StyleSheet.create ({
         justifyContent: 'center',
         borderColor: 'teal',
         borderWidth: 1,
-        zIndex: 0.5,
+       
     },
 
     leadIcon: {
@@ -59,6 +59,10 @@ const styles = StyleSheet.create ({
         elevation: 5,
         left: '20%', backgroundColor: 'white', borderRadius: 50, width: 45, height: 45, justifyContent: 'center', alignItems: 'center'
      },
+     dropdown: {
+        borderWidth: 0,
+        borderBottomWidth:1,
+    },
 })
  
 export default styles;

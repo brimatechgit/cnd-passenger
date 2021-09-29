@@ -13,15 +13,11 @@ const PickUpInstructions = (props) => {
         <View style={{padding: 10}}>
             <View>
                 <Text style={styles.title}>Pick Up Instructions</Text>
-                <View style={{height: 15}}></View>
-                <Text style={styles.subTitle}>Disclaimer - We need full location details therefore we 
-                    can pick up and drop off at accurate location
-                </Text>
             </View>
             <View style={{height: 15}}></View>
 
             <View style={{padding: 5}}>
-            <Card style={{height: 330,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
+            <Card style={{height: 230,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
 
                         <TextInput
                                 style={styles.inputBottom}

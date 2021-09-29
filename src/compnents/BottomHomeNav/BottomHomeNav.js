@@ -25,7 +25,7 @@ const BottomHomeNav = ({navigation}) => {
                         
                     </TouchableOpacity> */}
 
-                    <Button text='Where Are You' navPage='DestinationSearch' navigation={navigation}></Button>
+                    <Button text='Where Are You?' navPage='DestinationSearch' navigation={navigation}></Button>
             
         </View>
      );

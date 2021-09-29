@@ -40,6 +40,8 @@ import SupportChat from './src/screens/AccountPage/SupportChat/SupportChat';
 import InviteFriendsPage from './src/screens/AccountPage/inviteFriends/inviteFriends';
 import SplashPage from './src/screens/LandingPage/splashScreen/splashPage';
 import { TransitionPresets } from '@react-navigation/stack';
+import SetAddress from './src/screens/DestinationPage/SetAddress';
+import InviteTermsPage from './src/screens/AccountPage/inviteFriends/inviteTerms';
 
 
 const Stack = createNativeStackNavigator();
@@ -134,9 +136,11 @@ export default function App() {
         <Stack.Screen name="AccountCardDetailsPage" component={AccountCardDetailsPage} />
         <Stack.Screen name="PromotionPage" component={PromotionPage} />
         <Stack.Screen name="InviteFriendsPage" component={InviteFriendsPage} />
+        <Stack.Screen name="InviteTermsPage" component={InviteTermsPage} />
         <Stack.Screen name="SplashPage"  component={SplashPage} />
         <Stack.Screen name="AboutPage" component={AboutPage} />
         <Stack.Screen name="PromoPage" component={PromoPage} />
+        <Stack.Screen name="SetAddress" component={SetAddress} />
         <Stack.Screen name="ChangePassword" component={ChangePassword} />
         <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={AccountPage} />
       </Stack.Navigator>

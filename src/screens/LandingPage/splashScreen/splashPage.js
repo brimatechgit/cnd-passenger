@@ -14,12 +14,15 @@ const SplashPage = ({navigation}) => {
 
     return ( 
         <View style={{flex: 1, alignItems:'center', padding:20}}>
-            <View style={{height: '100%', alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{height: '90%', alignItems: 'center', justifyContent: 'center'}}>
             <Image 
 style={{flex: 1, }}
   resizeMode = 'contain'
 source={require('../../../assets/images/landingLogo.png')} />
             </View>
+
+            <Text style={{color:'teal', fontWeight:'bold'}}>Powered by</Text>
+            <Text style={{fontSize: 25}}>brima<Text style={{color:'steelblue', fontSize: 25}}>tech</Text></Text>
         </View>
      );
 }

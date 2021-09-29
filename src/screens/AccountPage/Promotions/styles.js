@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20, justifyContent: 'center',
-        padding: 5
+        padding: 5, color:'teal'
     },
     inputView: {
         flexDirection: 'row', justifyContent: 'space-between'

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Text, TextInput, Pressable, CheckBox } from 'react-native';
 import {Card} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -12,6 +12,7 @@ import Button from '../../compnents/Button/Button';
 const LoginPage = props => {
 
     const [mobile, onChangeMobile] = React.useState();
+    const [isSelected, setSelection] = useState(false);
 
 
     const [open, setOpen] = useState(false);
@@ -29,7 +30,7 @@ const LoginPage = props => {
                 <Text style={{fontSize: 15, color: 'teal'}}>Please Enter Your Number</Text>
 
                 <View style={{height: 10}}></View>
-                <Text style={{fontSize: 12, color: 'teal'}}>
+                <Text style={{fontSize: 12, color: 'teal', width:'65%'}}>
                     We will send an SMS with a code to 
                     varify your mobile number
                 </Text>
@@ -67,18 +68,22 @@ const LoginPage = props => {
 
             <View style={{height: 15}}></View>
 
-            <View style={{ flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row',alignItems:'center'}}>
              {/* I agree to the Terms & Conditions and Privacy Policy */}
-             <Icon name='verified' size={15} style={{top: 4}}></Icon>
-             <Text style={{fontSize:12}}>I agree to the <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{fontSize:12, color: 'teal', top: 3}}>Terms & Conditions and Privacy Policy</Text></Pressable></Text>
+             <CheckBox
+                value={isSelected}
+                onValueChange={setSelection}
+                style={{alignSelf: 'center',}}
+                />
+             <Text style={{fontSize:12, bottom:3}}>I agree to the <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{fontSize:12, color: 'teal', top: 3}}>Terms & Conditions and Privacy Policy</Text></Pressable></Text>
             </View>
             <View style={{height: 15}}></View>
             <View >
                 <Text style={{fontSize: 15, color: 'teal'}}>Or sign in with Socials</Text>
                 <View style={{flexDirection: 'row'}}>
                     {/* Add Social icons here */}
-                    <IconIonic name='logo-google' size={25} style={{padding: 5}}></IconIonic>
-                    <IconIonic name='logo-facebook' size={25} style={{padding: 5}}></IconIonic>
+                    <IconIonic name='logo-google' color='tomato' size={25} style={{padding: 5}}></IconIonic>
+                    <IconIonic name='logo-facebook' color='royalblue' size={25} style={{padding: 5}}></IconIonic>
                     
                 </View>
             </View>

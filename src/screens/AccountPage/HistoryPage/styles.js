@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     },
 
     circle: {
-        height: 10, width: 10, backgroundColor:'teal', borderRadius: 50, marginRight:5  
+        height: 5, width: 5, backgroundColor:'teal', borderRadius: 50, marginRight:5  
     }, 
     parcelText: {
         fontWeight:'bold',paddingTop: 5

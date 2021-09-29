@@ -96,8 +96,7 @@ const RegisterPage = props => {
                         <View style={{height: 50}}></View>
 
                 <View style={{ justifyContent:'center', alignItems: 'center',}}>
-                    <Text style={{textAlign: 'center'}}>By clicking sign up you agree to the 
-following <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{color: 'teal', textAlign: 'center'}}>Terms and Conditions</Text></Pressable></Text>
+                    <Text style={{textAlign: 'center'}}>By clicking sign up you agree to our <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{color: 'teal', textAlign: 'center'}}>Terms and Conditions</Text></Pressable></Text>
                 </View>
 
                 <View style={{height: 15}}></View>
@@ -109,7 +108,7 @@ following <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text 
                     </View> */}
 
                     <View style={{alignItems:'center'}}>
-                        <Button text='Register' navPage='ApprovalPage' navigation={props.navigation} ></Button>
+                        <Button text='Sign Up' navPage='ApprovalPage' navigation={props.navigation} ></Button>
                     </View>
 
                     <View style={{height: 15}}></View>

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
 import Button from '../../../compnents/Button/Button';
+import InviteTermsPage from './inviteTerms';
 
 
 const InviteFriendsPage = (props) => {
@@ -17,7 +18,7 @@ const InviteFriendsPage = (props) => {
                 <Text style={{fontWeight:'bold', fontSize:18, color:'teal', paddingVertical:5}}>Get free delivery!</Text>
 
                 <Text style={{color:'teal', paddingVertical:5}}>Invite 10 friends and get 100% off your next delivery! </Text>    
-                <Text style={{color:'teal', paddingVertical:5}}>Terms and Conditions Apply </Text>    
+                <Pressable onPress={() => props.navigation.navigate(InviteTermsPage)}><Text style={{color:'teal', paddingVertical:5}}>Terms and Conditions Apply </Text></Pressable>    
             </View>
 
 

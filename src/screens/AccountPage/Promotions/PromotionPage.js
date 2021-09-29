@@ -8,7 +8,7 @@ const PromotionPage = props => {
     return ( 
         <View style={{flex:1, padding: 10}}>
             <View style={{alignItems:'center', padding: 15}}>
-                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Card Details</Text>
+                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Promotions</Text>
             </View>
 
             <View>
@@ -18,7 +18,7 @@ const PromotionPage = props => {
                 <Card style={styles.promoCard} onPress={() => props.navigation.navigate("PromoPage", {title: 'Meet me halfway'})}>
                         
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text>Meet me halfway</Text>
+                            <Text style={{color:'teal'}}>Meet me halfway</Text>
                             </View>
                         
                     </Card>
@@ -26,7 +26,7 @@ const PromotionPage = props => {
                     <Card style={styles.promoCard}>
                         <TouchableOpacity onPress={() => props.navigation.navigate("PromoPage" , {title: 'Invite friends'})}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text>Invite friends</Text>
+                            <Text style={{color:'teal'}}>Invite friends</Text>
                             </View>
                         </TouchableOpacity>
                     </Card>
@@ -41,17 +41,17 @@ const PromotionPage = props => {
 
                 <Card style={styles.promoCard}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                        <Text>Old Promo</Text>
+                        <Text style={{color:'teal'}}>Old Promo</Text>
                         </View>
                 </Card>
                 <Card style={styles.promoCard}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                        <Text>Old Promo</Text>
+                        <Text style={{color:'teal'}}>Old Promo</Text>
                         </View>
                 </Card>
                 <Card style={styles.promoCard}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                        <Text>Old Promo</Text>
+                        <Text style={{color:'teal'}}>Old Promo</Text>
                         </View>
                 </Card>
                 {/* props.navigation.navigate() */}

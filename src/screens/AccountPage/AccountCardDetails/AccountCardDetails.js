@@ -109,7 +109,7 @@ const AccountCardDetailsPage = props => {
                     <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
                         {/* props.navigation.navigate(ConfirmPickUpPage) */}
-                            <Text style={{color: 'teal', fontSize: 20}}>Proceed to Pay</Text>
+                            <Text style={{color: 'teal', fontSize: 20}}>Update</Text>
                         </Pressable>
                     </View>
 

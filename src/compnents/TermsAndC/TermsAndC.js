@@ -6,7 +6,7 @@ const TermsAndCo = ({route, navigation}) => {
     return ( 
         <View style={{padding: 15}}>
             
-            <Text style={{fontSize: 22, paddingVertical: 10}}>{route.params.pageTitle} | {route.params.title}</Text>
+            <Text style={{fontSize: 22, paddingVertical: 10, fontWeight:'bold', color:'teal'}}>{route.params.pageTitle} | {route.params.title}</Text>
 
 
             <Text>

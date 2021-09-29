@@ -18,7 +18,7 @@ source={require('../../assets/images/landingLogo.png')} />
 
             <View style={{ justifyContent: 'center', alignItems: 'center'}}>
 
-                <Text style={{color: 'teal', fontSize: 22}}>Welcome To ClicknDeliver</Text>
+                <Text style={{color: 'teal', fontSize: 18, fontWeight: 'bold'}}>Welcome To ClicknDeliver</Text>
             </View>
 
             <View style={{flexDirection:'row', }}>

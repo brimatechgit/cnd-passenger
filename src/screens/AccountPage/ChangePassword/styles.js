@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
         
     },
     circle: {
-        height: 7, width: 7, backgroundColor:'red', borderRadius: 50, marginRight:5  
+        height: 5, width: 5, backgroundColor:'red', borderRadius: 50, marginRight:5  
     }, 
 })
 

@@ -4,10 +4,14 @@ import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from '../../../compnents/Button/Button';
 import HistorySummary from './HistorySummary';
+
 import styles from './styles';
 
 
 const HistoryPage = (props) => {
+
+    
+
     return ( 
         <View style={{flex:1, padding: 10}}>
             <View style={{alignItems:'center', padding: 15}}>
@@ -17,7 +21,8 @@ const HistoryPage = (props) => {
             <View>
                 <Card style={styles.promoCard}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text style={{color: 'teal'}}>Last 30 Days</Text>
+                            <Text style={{color: 'teal',fontWeight:'bold'}}>Last 7 Days</Text>
+                            <Text >Last 30 Days</Text>
                             <Text>Last 90 Days</Text>
                         </View>
                 </Card>
@@ -71,6 +76,9 @@ const HistoryPage = (props) => {
                 <Button text='Show More' navPage='' navigation={props.navigation}></Button>
             </View>
 
+
+
+            
 
         </View>
      );

@@ -2,10 +2,19 @@ import React from 'react'
 import { View,Text,Pressable } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Modal from "react-native-modal";
 import styles from './styles';
 
 
 const HistorySummary = () => {
+
+
+    const [isModalVisible, setModalVisible] = React.useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!isModalVisible);
+    }
+
     return ( 
         <View style={{flex:1, padding:10}}>
             <View>
@@ -13,7 +22,7 @@ const HistorySummary = () => {
 
                 <View style={{flexDirection:'row', justifyContent:'space-between', paddingTop: 65}}>
                     <Text style={styles.titleText}>Delivered by Dirvers Name</Text>
-                    <Icon name='person' color='teal' size={22}></Icon>
+                    <Pressable onPress={toggleModal}><Icon name='person' color='teal' size={22}></Icon></Pressable>
                 </View>
                 
                 <Text style={styles.innerText}>Date: 2021/09/16</Text>
@@ -55,6 +64,49 @@ const HistorySummary = () => {
                     <Text style={styles.title}>History</Text>
                 </Card>
             </View>
+
+
+            <Modal isVisible={isModalVisible}
+                            hasBackdrop={false}
+                        >
+                            <View style={{
+                                left: 10,
+                                height: 300,
+                                width: 300,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderColor: '#ccc',
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                backgroundColor: 'white',
+                                elevation: 20,
+                                padding: 15,
+                                borderRadius: 25,
+                            }}>
+                                <Pressable onPress={toggleModal} style={{position:'absolute', top: '2%', right: '8%'}}>
+                                        <Icon name='close' color='teal' size={42}></Icon>
+                                </Pressable>
+                                <View style={{padding: 10, alignItems:'center'}}>
+                                    {/* <Pressable onPress={toggleModal} style={{position:'absolute',}}>
+                                        <Icon name='close' color='teal' size={42}></Icon>
+                                    </Pressable> */}
+                                <Icon name='person' color='teal' size={85}></Icon>
+
+                                    <Text style={{textAlign:'center', fontWeight:'bold', fontSize: 22}}>
+                                        Name and Surname
+                                    </Text>
+                                    <Text style={{textAlign:'center', fontWeight:'bold', color:'teal', fontSize: 17}}>
+                                        SNH 55GP
+                                    </Text>
+                                
+                                
+                                </View>
+
+                            </View>
+
+
+                    
+                    </Modal>
             
         </View>
      );

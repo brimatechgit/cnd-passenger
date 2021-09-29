@@ -19,10 +19,12 @@ const PromoPage = ({navigation, route}) => {
                 <Text style={{fontSize:32}}>OFF</Text>
             </View>
 
-            <View>
+            <View style={{alignItems:'center'}}>
                 <Text style={styles.subTitle}>Enter Promo code to redeem</Text>
                 <Text style={styles.subTitle}>the 50 percent off your delivery</Text>
             </View>
+
+            <Text style={[styles.subTitle, {fontWeight:'bold'}]}>4 Days Left!</Text>
 
             <View>
             <TextInput

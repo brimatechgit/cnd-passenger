@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         padding: 5
     },
     text: {
-        fontSize: 22, justifyContent: 'center', color:'teal'
+        fontSize: 22, justifyContent: 'center', color:'teal', fontWeight:'bold'
         
     },
     inputView: {

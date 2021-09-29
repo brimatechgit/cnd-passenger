@@ -12,7 +12,7 @@ const DriverLoad = () => {
 
     return ( 
         <View style={[styles.container, {height: '15%', top: '85%'}]}>
-            <View style={{alignItems:'center', flexDirection:'row'}}>
+            <View style={{alignItems:'center', flexDirection:'row', top: '10%'}}>
                 {/* get username here */}
                 {/* <AnimatedLoader
         visible={visible}
@@ -23,8 +23,10 @@ const DriverLoad = () => {
       >
         <Text>Doing something...</Text>
       </AnimatedLoader> */}
-                <Text style={{fontSize: 22, color: 'teal', paddingHorizontal: 15}}>Connecting to the driver</Text>
-                <View style={{height: 10}}></View> 
+            <View style={{height: 10}}></View> 
+
+                <Text style={{fontSize: 22, color: 'teal', fontWeight:'bold'}}>Connecting to the driver</Text>
+               
             </View>
             
             
