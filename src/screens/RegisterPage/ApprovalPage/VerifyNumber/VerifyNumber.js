@@ -30,7 +30,7 @@ const VerifyNumber = props => {
                 <View style={{height: 10}}></View>
                 <Text style={{fontSize: 12,  width: 200, color:'teal'}}>
                     We will send an SMS with a code to 
-                    varify your mobile number
+                    verify your mobile number
                 </Text>
             </View>
             <View style={{height: 15}}></View>
