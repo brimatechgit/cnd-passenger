@@ -92,14 +92,14 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
         borderRadius: 50,
         height: 45,
-        width: '60%',
+        width: '42%',
         alignItems: 'center',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        borderColor: 'black',
-        borderWidth:1,
         flexDirection: 'row',
         padding: 10,
-        paddingVertical:10,
+        elevation:10,
+        margin: 10
         
     },
     rowView: {

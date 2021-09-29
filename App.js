@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CustomNavigationBar from './CustomNavBar';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator, CardStyleInterpolatoror, } from '@react-navigation/native-stack';
 import LandingPage from './src/screens/LandingPage/LandingPage';
 import RegisterPage from './src/screens/RegisterPage/RegisterPage';
 import LoginPage from './src/screens/LoginPage/LoginPage';
@@ -33,22 +33,81 @@ import ParcelPage from './src/screens/DestinationPage/ParcelPage/ParcelPage';
 import HistoryPage from './src/screens/AccountPage/HistoryPage/HistoryPage';
 import PromoPage from './src/screens/AccountPage/Promotions/PromoPage';
 import SafetyPage from './src/screens/AccountPage/Safety Centre/SafetyPage';
+import HistorySummary from './src/screens/AccountPage/HistoryPage/HistorySummary';
+import RegistrationVerification from './src/screens/RegisterPage/ApprovalPage/VerifyNumber/RegistrationVerification/RegistrationVerification';
+import VerifyNumber from './src/screens/RegisterPage/ApprovalPage/VerifyNumber/VerifyNumber';
+import SupportChat from './src/screens/AccountPage/SupportChat/SupportChat';
+import InviteFriendsPage from './src/screens/AccountPage/inviteFriends/inviteFriends';
+import SplashPage from './src/screens/LandingPage/splashScreen/splashPage';
+import { TransitionPresets } from '@react-navigation/stack';
 
 
 const Stack = createNativeStackNavigator();
+
+const config = {
+  animation: 'spring',
+  config: {
+    stiffness: 1000,
+    damping: 500,
+    mass: 3,
+    overshootClamping: true,
+    restDisplacementThreshold: 0.01,
+    restSpeedThreshold: 0.01,
+  },
+};
+
+const verticalAnimation = {
+  gestureDirection: 'vertical',
+  cardStyleInterpolator: ({ current, layouts }) => {
+    return {
+      cardStyle: {
+        transform: [
+          {
+            translateY: current.progress.interpolate({
+              inputRange: [0, 1],
+              outputRange: [layouts.screen.height, 0],
+            }),
+          },
+        ],
+      },
+    };
+  },
+};
+
+const horizontalAnimation = {
+  cardStyleInterpolator: ({ current, layouts }) => {
+    return {
+      cardStyle: {
+        transform: [
+          {
+            translateX: current.progress.interpolate({
+              inputRange: [0, 1],
+              outputRange: [layouts.screen.width, 0],
+            }),
+          },
+        ],
+      },
+    };
+  },
+};
+
+const screenOptionStyle = {
+  // headerShown: false,  
+  ...TransitionPresets.SlideFromRightIOS,
+}; 
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="LandingPage"
+      initialRouteName="SplashPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}
       >
-        <Stack.Screen name="LandingPage" component={LandingPage} />
+        <Stack.Screen name="LandingPage" options={horizontalAnimation} component={LandingPage} />
         <Stack.Screen name="RegisterPage" component={RegisterPage} />
-        <Stack.Screen name="LoginPage" component={LoginPage} />
+        <Stack.Screen name="LoginPage" options={horizontalAnimation} component={LoginPage} />
         <Stack.Screen name="Verification" component={Verification} />
         <Stack.Screen name="ApprovalPage" component={ApprovalPage} />
         <Stack.Screen name="HomePage" component={HomePage} />
@@ -67,9 +126,15 @@ export default function App() {
         <Stack.Screen name="ParcelPage" component={ParcelPage} />
         <Stack.Screen name="ConnectDriverPage" component={ConnectDriverPage} />
         <Stack.Screen name="SupportPage" component={SupportPage} />
+        <Stack.Screen name="SupportChat" component={SupportChat} />
         <Stack.Screen name="HistoryPage" component={HistoryPage} />
+        <Stack.Screen name="HistorySummary" component={HistorySummary} />
+        <Stack.Screen name="RegistrationVerification" component={RegistrationVerification} />
+        <Stack.Screen name="VerifyNumber" component={VerifyNumber} />
         <Stack.Screen name="AccountCardDetailsPage" component={AccountCardDetailsPage} />
         <Stack.Screen name="PromotionPage" component={PromotionPage} />
+        <Stack.Screen name="InviteFriendsPage" component={InviteFriendsPage} />
+        <Stack.Screen name="SplashPage"  component={SplashPage} />
         <Stack.Screen name="AboutPage" component={AboutPage} />
         <Stack.Screen name="PromoPage" component={PromoPage} />
         <Stack.Screen name="ChangePassword" component={ChangePassword} />

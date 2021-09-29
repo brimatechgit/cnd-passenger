@@ -106,8 +106,10 @@ const styles = StyleSheet.create({
 
     title: {
         fontSize: 22,
-        fontWeight: '600',
-        color: 'teal'
+        fontWeight: 'bold',
+        color: 'teal',
+        paddingVertical: 10
+        
     },
 
     subTitle: {

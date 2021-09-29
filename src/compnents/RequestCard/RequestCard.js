@@ -76,7 +76,7 @@ const RequestCard = props => {
 
                     <TouchableOpacity onPress={toggleModal} style={styles.button}>
                     
-                            <Text style={{color: 'teal', fontSize: 15}}>Request</Text>
+                            <Text style={{color: 'teal', fontSize: 22, bottom:2}}>Request</Text>
                         
                     </TouchableOpacity>
 
@@ -110,7 +110,7 @@ const RequestCard = props => {
                                 
                                 </View>
 
-                                <TouchableOpacity onPress={() => props.navigation.navigate(SummaryPage)} style={[styles.button, {width:'85%'}]}>
+                                <TouchableOpacity onPress={() => {props.navigation.navigate(SummaryPage),  setModalVisible(false)}} style={[styles.button, {width:'85%'}]}>
                     
                                     <Text style={{color: 'teal', fontSize: 15}}>Agree to Terms & Conditions</Text>
                                 

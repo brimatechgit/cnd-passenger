@@ -93,9 +93,18 @@ const ChangePassword = () => {
             <View>
                 <Text style={styles.title}>Your password needs to:</Text>
                 <View style={{padding: 15}}>
-                    <Text style={styles.subTitle}>include at least one number or symbol. </Text>
-                    <Text style={styles.subTitle}>include both lower and upper case characters.</Text>
-                    <Text style={styles.subTitle}>be at least 8 characters long.  </Text>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>include at least one number or symbol. </Text>
+                    </View>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>include both lower and upper case characters </Text>
+                    </View>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>be at least 8 characters long. </Text>
+                    </View>
                 </View>
             </View>
 

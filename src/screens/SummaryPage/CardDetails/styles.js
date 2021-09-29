@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     },
 
     inputBottom: {
+        width:'80%',
         padding: 5,
         margin: 5,
         justifyContent: 'flex-start'

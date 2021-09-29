@@ -15,16 +15,18 @@ const PromotionPage = props => {
                 <View style={{alignItems: 'center'}}>
                     <Text style={{...styles.text, }}>New Promotions</Text>
                 </View>
-                    <Card style={styles.promoCard}>
+                <Card style={styles.promoCard} onPress={() => props.navigation.navigate("PromoPage", {title: 'Meet me halfway'})}>
+                        
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text>Meet me half way</Text>
+                            <Text>Meet me halfway</Text>
                             </View>
+                        
                     </Card>
                     {/* props.navigation.navigate() */}
                     <Card style={styles.promoCard}>
-                        <TouchableOpacity onPress={() => props.navigation.navigate(PromoPage)}>
+                        <TouchableOpacity onPress={() => props.navigation.navigate("PromoPage" , {title: 'Invite friends'})}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text>Enter code</Text>
+                            <Text>Invite friends</Text>
                             </View>
                         </TouchableOpacity>
                     </Card>

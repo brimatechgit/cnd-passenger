@@ -27,15 +27,19 @@ const DropOffDetails = props => {
     return ( 
         <View style={{flex: 1, padding: 15}}>
             <View>
-                <Text style={styles.title}>Drop Off Location Details</Text>
-                <Text style={styles.subTitle}>Disclaimer - We need full location details therefore we 
+                <Text style={styles.title}>
+                    <Text style={{fontWeight:'bold', elevation:5}}>Drop Off</Text> Location Details</Text>
+                <Text style={styles.subTitle}>We need full location details so we 
                     can pick up and drop off at accurate location
                 </Text>
             </View>
 
             <View>
             <Card style={{height: 440,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
-                   
+
+                    <View style={{alignItems:'center'}}>
+                       <Icon name='people' size={60}></Icon>
+                    </View>
 
                     <View style={styles.form}>
                         <View>
@@ -56,7 +60,7 @@ const DropOffDetails = props => {
                         </View>
                         <View>
 
-                        <View pointerEvents="none">
+                        <View>
                             {/* <Text></Text> */}
                             <TextInput
                                 style={styles.inputBottom}
@@ -70,19 +74,7 @@ const DropOffDetails = props => {
                         
                         
                         
-                        
-                        <View pointerEvents="none">
-                            {/* //should navigate to google search page */}
-                            {/* <Text>Address</Text> */}
-                            <TextInput
-                                style={styles.inputBottom}
-                                onChangeText={onChangeStreetNumber}
-                                value={streetNumber}
-                                placeholder='Street Number'  
-                            />
-                        </View>
-
-                        <View pointerEvents="none">
+                        <View >
                             {/* <Text>Street Name</Text> */}
                             <TextInput
                                 style={styles.inputBottom}
@@ -92,14 +84,26 @@ const DropOffDetails = props => {
                             />
 
                         </View>
+                        
+                        <View>
+                            {/* //should navigate to google search page */}
+                            {/* <Text>Address</Text> */}
+                            <TextInput
+                                style={styles.inputBottom}
+                                onChangeText={onChangeStreetNumber}
+                                value={streetNumber}
+                                placeholder='Street No'  
+                            />
+                        </View>
 
-                        <View pointerEvents="none">
+
+                        <View>
                             {/* <Text>Street Name</Text> */}
                             <TextInput
                                 style={styles.inputBottom}
                                 onChangeText={onChangeContact}
                                 value={contact}
-                                placeholder='Contact Details'
+                                placeholder='Recipient Contact Details'
                                 keyboardType='number-pad'  
                             />
 

@@ -26,18 +26,18 @@ const SummaryPage = props => {
 
                 <View style={{height: 20}}></View> 
                 <View style={styles.rowView}>
-                    <Text style={{color: 'teal', fontSize: 17}}>Total</Text>
+                    <Text style={{color: 'teal', fontSize: 17, fontWeight:'bold'}}>Total</Text>
                     <Text style={styles.subTitle}>R60</Text>
                 </View>
 
                 <View>
                     <View style={{height: 15}}></View>
                     <View style={{flexDirection: 'row', alignItems:'center'}}>
-                        <View style={{backgroundColor: 'teal', borderRadius: 100, marginHorizontal: 5, width: 8, height: 8}}></View>
-                        <Text>Pick up Address</Text>
+                        <View style={{backgroundColor: 'teal', borderRadius: 100, marginRight:5, width: 5, height: 5}}></View>
+                        <Text style={{color:'gray', fontSize:12}}>Pick up Address</Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={{color: 'teal', fontSize: 17}}>234 Brima Road, Villy estate 219</Text>
+                        <Text style={{color: 'teal', fontSize: 14}}>234 Brima Road, Villy estate 219</Text>
                     </View>
                 </View>
 
@@ -45,11 +45,11 @@ const SummaryPage = props => {
                 <View>
                     <View style={{height: 15}}></View>
                     <View style={{flexDirection: 'row', alignItems:'center'}}>
-                    <View style={{backgroundColor: 'teal', borderRadius: 100, marginHorizontal: 5, width: 8, height: 8}}></View>
-                        <Text>Drop Off Address</Text>
+                    <View style={{backgroundColor: 'teal', borderRadius: 100, marginRight:5, width: 5, height: 5}}></View>
+                        <Text style={{color:'gray', fontSize:12}}>Drop Off Address</Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>
-                        <Text style={{color: 'teal', fontSize: 17}}>5 Marlin Rd, Jet Park, Boksburg, 145</Text>
+                        <Text style={{color: 'teal', fontSize: 14,}}>5 Marlin Rd, Jet Park, Boksburg, 145</Text>
                     </View>
                 </View>
 
@@ -91,7 +91,7 @@ const SummaryPage = props => {
                     
                     </Card>
                     <View style={{right: 30}}>
-                        <Text style={{color: 'teal', fontWeight:'600', fontSize: 14}}>Add Payment Method</Text>
+                        <Text style={{color: 'teal', fontWeight:'bold', fontSize: 14}}>Add Payment Method</Text>
                         <Text style={{color: 'grey', fontWeight:'600', fontSize: 12}}>Credit / Debit Card</Text>
                     </View>
                     <Card style={{...styles.circularIcon, width: 25, height: 25}}>

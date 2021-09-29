@@ -5,13 +5,15 @@ const styles = StyleSheet.create ({
     container: {
         position: 'absolute',
         top: '75%',
+        width:'100%',
         backgroundColor: 'white',
         height: '100%',
         borderTopEndRadius: 15,
         borderTopStartRadius: 15,
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 10
+        padding: 10,
+        flex:1
     },
 
     status: {

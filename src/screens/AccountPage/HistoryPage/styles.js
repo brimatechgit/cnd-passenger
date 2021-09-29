@@ -111,16 +111,20 @@ const styles = StyleSheet.create({
     },
 
     subTitle: {
-        fontSize: 15,
+        fontSize: 13,
         color: 'teal'
+    },
+
+    icon:{
+
     },
 
     promoCard: {
         elevation: 10, borderRadius: 25, padding:15, margin: 6
     },
 
-    icon: {
-        
+    circle: {
+        height: 10, width: 10, backgroundColor:'teal', borderRadius: 50, marginRight:5  
     }, 
     parcelText: {
         fontWeight:'bold',paddingTop: 5
@@ -128,7 +132,16 @@ const styles = StyleSheet.create({
 
     textView: {
         justifyContent:'space-between', flexDirection:'row', padding: 10
+    },
+    innerText: {
+        color:'gray',
+        fontSize:12
+    }, 
+
+    titleText: {
+        fontWeight:'bold', color:'teal'
     }
+    
 
 })
 

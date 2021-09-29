@@ -86,14 +86,13 @@ const styles = StyleSheet.create({
         
     },
     inputView: {
-        flexDirection: 'row', justifyContent: 'space-between'
+        flexDirection: 'row', justifyContent: 'space-between', color: 'teal'
     },
     button: {
         elevation: 3,
         backgroundColor: 'white',
         borderRadius: 50,
-        height: 35,
-        width: '45%',
+        padding: 5,
         alignItems: 'center',
         justifyContent: 'center',
         borderColor: 'teal',

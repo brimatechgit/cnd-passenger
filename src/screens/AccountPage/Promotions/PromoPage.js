@@ -4,14 +4,14 @@ import styles from './styles';
 
 
 
-const PromoPage = ({navigation}) => {
+const PromoPage = ({navigation, route}) => {
 
     const [code, onChangeCode] = React.useState("");
 
     return ( 
         <View style={{flex:1, padding: 10, alignItems:'center'}}>
             <View style={{alignItems:'center', padding: 15}}>
-                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Meet me half way</Text>
+                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>{route.params.title}</Text>
             </View>
 
             <View style={{borderRadius: 50, padding: 25, borderColor: 'red', borderWidth: 1, marginVertical: 10}}>

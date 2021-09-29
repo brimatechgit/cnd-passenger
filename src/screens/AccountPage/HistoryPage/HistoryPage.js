@@ -2,10 +2,12 @@ import React from 'react'
 import { View, Text, Pressable, TouchableOpacity } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Button from '../../../compnents/Button/Button';
+import HistorySummary from './HistorySummary';
 import styles from './styles';
 
 
-const HistoryPage = () => {
+const HistoryPage = (props) => {
     return ( 
         <View style={{flex:1, padding: 10}}>
             <View style={{alignItems:'center', padding: 15}}>
@@ -21,6 +23,36 @@ const HistoryPage = () => {
                 </Card>
 
                 <View style={styles.textView}>
+                    <Pressable >
+                        <Text>2021/09/18</Text>
+                        
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
+                        <Text>Friday - 12:41</Text>
+                    </Pressable >
+
+                    <Pressable onPress={() => props.navigation.navigate(HistorySummary)} style={{ justifyContent:'center'}}><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
+                </View>
+                <View style={styles.textView}>
+                    <View>
+                        <Text>2021/09/18</Text>
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
+                        <Text>Friday - 12:41</Text>
+                    </View>
+
+                    <Pressable onPress={() => props.navigation.navigate(HistorySummary)} style={{ justifyContent:'center'}} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
+                </View>
+                <View style={styles.textView}>
+                    <View>
+                    
+                        <Text>2021/09/18</Text>
+                        <Text style={styles.parcelText}>Parcel Delivery</Text>
+                    
+                        <Text>Friday - 12:41</Text>
+                    </View>
+
+                    <Pressable onPress={() => props.navigation.navigate(HistorySummary)} style={{ justifyContent:'center'}}><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
+                </View>
+                <View style={styles.textView}>
                     <View>
                         <Text>2021/09/18</Text>
                         <Text style={styles.parcelText}>Parcel Delivery</Text>
@@ -29,42 +61,14 @@ const HistoryPage = () => {
 
                     <Pressable onPress={() => console.log('hi')} style={{ justifyContent:'center'}}><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
                 </View>
-                <View style={styles.textView}>
-                    <View>
-                        <Text>2021/09/18</Text>
-                        <Text style={styles.parcelText}>Parcel Delivery</Text>
-                        <Text>Friday - 12:41</Text>
-                    </View>
-
-                    <Pressable onPress={() => console.log('hi')} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
-                </View>
-                <View style={styles.textView}>
-                    <View>
-                        <Text>2021/09/18</Text>
-                        <Text style={styles.parcelText}>Parcel Delivery</Text>
-                        <Text>Friday - 12:41</Text>
-                    </View>
-
-                    <Pressable onPress={() => console.log('hi')} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
-                </View>
-                <View style={styles.textView}>
-                    <View>
-                        <Text>2021/09/18</Text>
-                        <Text style={styles.parcelText}>Parcel Delivery</Text>
-                        <Text>Friday - 12:41</Text>
-                    </View>
-
-                    <Pressable onPress={() => console.log('hi')} ><Icon name="chevron-forward" style={styles.icon} size={22}></Icon></Pressable>
-                </View>
             </View>
 
 
             <View style={{alignItems:'center'}}>
-                <TouchableOpacity onPress={() => console.log('navi')} style={styles.button}>
-                        {/* navigation.navigate(DestinationSearch) */}
-                                <Text style={{color: 'teal', fontSize: 15}}>Show More</Text>
-                            
-                        </TouchableOpacity>
+                
+
+
+                <Button text='Show More' navPage='' navigation={props.navigation}></Button>
             </View>
 
 

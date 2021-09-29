@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, Pressable, TextInput } from 'react-native';
 import  {Card}  from 'react-native-paper';
-import HomePage from '../../HomePage/HomePage';
-import Button from '../../../compnents/Button/Button';
+import HomePage from '../../../../HomePage/HomePage';
 import styles from './styles';
+import Button from '../../../../../compnents/Button/Button';
 
 
 
@@ -11,7 +11,7 @@ import styles from './styles';
 
 
 
-const Verification = props => {
+const RegistrationVerification = props => {
 
     const [OTP, onChangeOTP] = React.useState();
     const [OTP2, onChangeOTP2] = React.useState();
@@ -22,9 +22,9 @@ const Verification = props => {
         <View style={{flex:1, padding: 20}}>
             <Text style={styles.text}>Enter Verification Code</Text>
             <View style={{height: 15}}></View>
-            <Text style={{color: 'teal'}}>An SMS code was sent to</Text>
+            <Text style={{color:'teal'}}>An SMS code was sent to</Text>
 
-            <Text style={{fontWeight: 'bold', paddingVertical:10}}>+27 45 935 9064</Text>
+            <Text style={{fontWeight: 'bold', paddingVertical:5}}>+27 45 935 9064</Text>
 
             <Text style={{color:'teal'}}>Edit Mobile Numbers</Text>
 
@@ -98,7 +98,9 @@ const Verification = props => {
                         <Pressable style={styles.button} onPress={() => console.log('sign in')}>
                             <Text style={{color: 'teal', fontSize: 15}}>Resend Code</Text>
                         </Pressable>
+                {/* <Button text='Resend Code' navPage='' navigation={props.navigation}></Button> */}
                 </View>
+
                 <View style={{height: 35}}></View>
                     {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.buttonBig} onPress={() => props.navigation.navigate(HomePage)}>
@@ -111,4 +113,4 @@ const Verification = props => {
      );
 }
  
-export default Verification;
+export default RegistrationVerification;

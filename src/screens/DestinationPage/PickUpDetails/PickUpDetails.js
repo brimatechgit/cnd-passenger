@@ -26,15 +26,21 @@ const PickUpLocationDetails = props => {
     return ( 
         <View style={{flex: 1, padding: 15}}>
             <View>
-                <Text style={styles.title}>Pick Up Location Details</Text>
-                <Text style={styles.subTitle}>Disclaimer - We need full location details therefore we 
-                    can pick up and drop off at accurate location
+                    <Text style={styles.title}>
+                        <Text style={{fontWeight: 'bold'}}>Pick Up </Text>
+                        
+                         Location Details</Text>
+                
+                <Text style={styles.subTitle}>We need full location details so we can pick up 
+                        and drop off at accurate locations
                 </Text>
             </View>
 
             <View>
-            <Card style={{height: 440,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
-                   
+            <Card style={{height: 480,padding:15, elevation: 5, marginTop: 15, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
+                   <View style={{alignItems:'center'}}>
+                       <Icon name='people' size={60}></Icon>
+                   </View>
 
                     <View style={styles.form}>
                         <View>
@@ -61,27 +67,12 @@ const PickUpLocationDetails = props => {
                                 style={styles.inputBottom}
                                 onChangeText={onChangeComplex}
                                 value={complex}
-                                placeholder='Unit no & complex Name'
+                                placeholder='Complex Name & Unit no'
                             />
 
                         </View>
-                        
-                        
-                        
-                        
-                        
-                        <View pointerEvents="none">
-                            {/* //should navigate to google search page */}
-                            {/* <Text>Address</Text> */}
-                            <TextInput
-                                style={styles.inputBottom}
-                                onChangeText={onChangeStreetNumber}
-                                value={streetNumber}
-                                placeholder='Street Number'  
-                            />
-                        </View>
 
-                        <View pointerEvents="none">
+                        <View>
                             {/* <Text>Street Name</Text> */}
                             <TextInput
                                 style={styles.inputBottom}
@@ -92,16 +83,15 @@ const PickUpLocationDetails = props => {
 
                         </View>
 
-                        <View pointerEvents="none">
-                            {/* <Text>Street Name</Text> */}
+                        <View >
+                            {/* //should navigate to google search page */}
+                            {/* <Text>Address</Text> */}
                             <TextInput
                                 style={styles.inputBottom}
-                                onChangeText={onChangeContact}
-                                value={contact}
-                                placeholder='Contact Details'
-                                keyboardType='number-pad'  
+                                onChangeText={onChangeStreetNumber}
+                                value={streetNumber}
+                                placeholder='Street No'  
                             />
-
                         </View>
                     
 

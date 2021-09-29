@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, Text, Pressable } from 'react-native';
 import  {Card } from 'react-native-paper';
+import Button from '../../../compnents/Button/Button';
 import LoginPage from '../../LoginPage/LoginPage';
 import styles from './styles';
+import VerifyNumber from './VerifyNumber/VerifyNumber';
 
 const ApprovalPage = props => {
     return ( 
@@ -19,17 +21,19 @@ const ApprovalPage = props => {
                 </View>
                 <View style={{padding: 10, justifyContent: 'center', alignItems: 'center'}}> 
 
-                <Text style={{width: '85%', top: '80%', justifyContent: 'center', textAlign: 'center', fontSize: 18, color: 'teal'}}>Congratulations your Account has been registered</Text>
+                <Text style={{width: '85%', top: '80%', justifyContent: 'center', textAlign: 'center', fontSize: 18, color: 'teal'}}>Congratulations you have signed up</Text>
                 </View>
             </Card>
 
 
             {/* start drive button here */}
-            <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, top: 45, width: "85%" }}>
-                <Pressable style={styles.button} onPress={() => props.navigation.navigate(LoginPage)}>
-                    <Text style={{color: 'teal', fontSize: 20, }}>Continue</Text>
+            {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, top: 45, width: "85%" }}>
+                <Pressable style={styles.button} onPress={() => props.navigation.navigate(VerifyNumber)}>
+                    <Text style={{color: 'teal', fontSize: 22, }}>Continue</Text>
                 </Pressable>
-            </View>
+            </View> */}
+
+            <Button text='Continue' navPage='VerifyNumber' navigation={props.navigation} ></Button>
             
         </View>
      );

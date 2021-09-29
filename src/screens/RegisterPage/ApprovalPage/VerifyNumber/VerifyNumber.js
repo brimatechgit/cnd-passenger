@@ -5,11 +5,10 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import IconIonic from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
-import Verification from './Verification/Verification';
-import TermsPage from '../TermsPage/TermsPage';
-import Button from '../../compnents/Button/Button';
+import RegistrationVerification from './RegistrationVerification/RegistrationVerification';
+import TermsPage from '../../../TermsPage/TermsPage';
 
-const LoginPage = props => {
+const VerifyNumber = props => {
 
     const [mobile, onChangeMobile] = React.useState();
 
@@ -25,11 +24,10 @@ const LoginPage = props => {
     return ( 
         <View style={{flex:1, padding: 20}}>
             <View>
-                <Text style={styles.text}>Welcome Back</Text>
-                <Text style={{fontSize: 15, color: 'teal'}}>Please Enter Your Number</Text>
+                <Text style={styles.text}>Verify your numbers.</Text>
 
                 <View style={{height: 10}}></View>
-                <Text style={{fontSize: 12, color: 'teal'}}>
+                <Text style={{fontSize: 12,  width: 200, color:'teal'}}>
                     We will send an SMS with a code to 
                     varify your mobile number
                 </Text>
@@ -74,7 +72,7 @@ const LoginPage = props => {
             </View>
             <View style={{height: 15}}></View>
             <View >
-                <Text style={{fontSize: 15, color: 'teal'}}>Or sign in with Socials</Text>
+                <Text style={{fontSize: 15}}>Or sign in with Socials</Text>
                 <View style={{flexDirection: 'row'}}>
                     {/* Add Social icons here */}
                     <IconIonic name='logo-google' size={25} style={{padding: 5}}></IconIonic>
@@ -82,17 +80,14 @@ const LoginPage = props => {
                     
                 </View>
             </View>
-{/* 
-            <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, width: 250,left: 30 }}>
-                        <Pressable style={styles.button} onPress={() => props.navigation.navigate(Verification)}>
+
+            <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, }}>
+                        <Pressable style={styles.button} onPress={() => props.navigation.navigate(RegistrationVerification)}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
-                    </View> */}
-
-
-            <Button text='Continue' navPage='Verification' navigation={props.navigation}></Button>
+                    </View>
         </View>
      );
 }
  
-export default LoginPage;
+export default VerifyNumber;
