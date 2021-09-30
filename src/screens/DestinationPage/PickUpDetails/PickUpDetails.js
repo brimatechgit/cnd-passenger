@@ -78,21 +78,21 @@ const PickUpLocationDetails = props => {
                                 style={styles.inputBottom}
                                 onChangeText={onChangeStreetName}
                                 value={streetName}
-                                placeholder='Street Name'  
+                                placeholder='Street Name & Street no'  
                             />
 
                         </View>
 
-                        <View >
-                            {/* //should navigate to google search page */}
-                            {/* <Text>Address</Text> */}
+                        {/* <View >
+                            {/* //should navigate to google search page 
+                            {/* <Text>Address</Text> 
                             <TextInput
                                 style={styles.inputBottom}
                                 onChangeText={onChangeStreetNumber}
                                 value={streetNumber}
                                 placeholder='Street No'  
                             />
-                        </View>
+                        </View> */}
                     
 
 

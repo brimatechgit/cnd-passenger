@@ -77,7 +77,7 @@ const RequestCard = props => {
                     
                 </View>
 
-                <View style={{height: 5}}></View>
+                <View style={{height: 20}}></View>
 
                     <TouchableOpacity onPress={() => {props.navigation.navigate(SummaryPage)}} style={styles.button}>
                     

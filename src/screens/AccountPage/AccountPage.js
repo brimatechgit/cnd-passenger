@@ -40,23 +40,16 @@ const AccountPage = props => {
             </View>
             <View>
 
-                <View>
+                <View style={{paddingTop:5}}>
 
-
-                <Pressable >
-                    <Card style={{elevation: 10, paddingVertical: 10}} onPress={() => props.navigation.navigate(AccountCardDetailsPage)}>
-
-                        <View style={{flexDirection: 'row'}}>
-
-                    <View style={styles.leadIcon}><Icon name="card" size={30}></Icon></View>
+                    <Pressable onPress={() => props.navigation.navigate(AccountCardDetailsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10, justifyContent: 'space-between'}}>
+                        <View style={styles.leadIcon}><Icon name="card" size={30}></Icon></View>
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>Payment Method</Text>
+                        <View  style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></View>
                         </View>
-                        </View>
-                    </Card>
-                </Pressable>
-
+                    </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(PromotionPage)} style={{padding: 5, flexDirection: 'row', elevation: 10, justifyContent: 'space-between'}}>
                         <View style={styles.leadIcon}><MIcon name="support-agent" size={30}></MIcon></View>
                         <View style={styles.textContainer}>
@@ -117,7 +110,7 @@ const AccountPage = props => {
                         <Pressable  style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
                         </View>
                     </Pressable>
-                    <Pressable onPress={onPress={toggleModal}} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                    <Pressable onPress={toggleModal} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
                         <View style={styles.leadIcon}><Icon name="log-out" size={30} color='red'></Icon></View>
                         <View style={styles.textContainer}>
 
@@ -133,7 +126,7 @@ const AccountPage = props => {
                         >
                             <View style={{
                                 left: 10,
-                                height: 300,
+                                height: 160,
                                 width: 300,
                                 justifyContent: 'center',
                                 alignItems: 'center',
@@ -145,12 +138,13 @@ const AccountPage = props => {
                                 padding: 15,
                                 borderRadius: 25,
                             }}>
-                                <View style={{padding: 10, alignItems:'center'}}>
-                                    <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red'}}>Cancel Your Pick up</Text>
+                                <View style={{padding: 5, alignItems:'center'}}>
 
-                                    <Text style={{textAlign:'center'}}>
-                                        Are you sure you want to Log out?
-                                    </Text>
+                                    <View style={{width:'80%'}}>
+
+                                        <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red', textAlign:'center'}}>Are you sure you want to Log out?</Text>
+                                    </View>
+
                                 
                                 
                                 </View>
@@ -162,9 +156,9 @@ const AccountPage = props => {
                                         <Text style={{color: 'teal', fontSize: 15}}>No</Text>
                                     
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5}]}>
+                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5, borderColor:'red'}]}>
                         
-                                        <Text style={{color: 'teal', fontSize: 15}}>Yes, Cancel</Text>
+                                        <Text style={{color: 'red', fontSize: 15}}>Yes, Log out</Text>
                                     
                                     </TouchableOpacity>
                                 </View>

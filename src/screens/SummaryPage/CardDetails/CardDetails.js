@@ -27,7 +27,7 @@ const CardDetailsPage = props => {
 
             <Card style={{borderRadius: 25, elevation: 10, height: 300, padding: 15}}>
             <Text style={{fontWeight:'100', padding: 5}}>Card Holder Name</Text>
-                <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                <Card style={{elevation: 10, borderRadius: 25, padding:1}}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                         <TextInput
                                 style={styles.inputBottom}
@@ -38,10 +38,10 @@ const CardDetailsPage = props => {
                                 color='teal'  
                             />
                             
-                            <Card style={{borderRadius: 50, elevation: 10, width: 35, height: 35, alignItems: 'center', right: 5}}>
+                            <Card style={{borderRadius: 50, elevation: 10, width: 30, height: 30, alignItems: 'center', right: 5}}>
                                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
 
-                                    <Icon name='close' size={20} style={{top: 8, }}></Icon>
+                                    <Icon name='close' size={20} style={{top: 4, }}></Icon>
                                 </View>
                                 
                                 </Card>
@@ -49,7 +49,7 @@ const CardDetailsPage = props => {
                         </View>
                 </Card>
                 <Text style={{fontWeight:'100', padding: 5}}>Card Number</Text>
-                <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                <Card style={{elevation: 10, borderRadius: 25, padding:1}}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                         <TextInput
                                 style={styles.inputBottom}
@@ -59,10 +59,10 @@ const CardDetailsPage = props => {
                                 keyboardType='number-pad'  
                             />
                             
-                            <Card style={{borderRadius: 50, elevation: 10, width: 35, height: 35, alignItems: 'center', right: 5}}>
+                            <Card style={{borderRadius: 50, elevation: 10, width: 30, height: 30, alignItems: 'center', right: 5}}>
                                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
 
-                                    <Icon name='close' size={20} style={{top: 8, }}></Icon>
+                                    <Icon name='close' size={20} style={{top: 4, }}></Icon>
                                 </View>
                                 
                                 </Card>
@@ -73,9 +73,9 @@ const CardDetailsPage = props => {
 
                 <View style={{height: 10}}></View>
                 <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-                    <View>
-                        <Text>Expiry Date</Text>
-                        <Card style={{width: 100, borderRadius: 50, elevation: 5}}>
+                    <View style={{alignItems:'center'}}>
+                        <Text style={{right:'2%'}}>Expiry Date</Text>
+                        <Card style={{width: 90, borderRadius: 50, elevation: 5,}}>
                         <TextInput
                                 style={styles.inputBottom}
                                 onChangeText={onChangeExpDate}
@@ -86,9 +86,9 @@ const CardDetailsPage = props => {
                             />
                         </Card>
                     </View>
-                    <View>
+                    <View style={{alignItems:'center'}}>
                         <Text>Security Code</Text>
-                        <Card style={{width: 100, borderRadius: 50, elevation: 5}}>
+                        <Card style={{width: 90, borderRadius: 50, elevation: 5}}>
                         <TextInput
                                 style={styles.inputBottom}
                                 onChangeText={onChangeCvv}

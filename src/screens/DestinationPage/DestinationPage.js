@@ -42,9 +42,9 @@ const DestinationSearch = (props) => {
 
   return (
     <SafeAreaView>
-
-    <View style={{position:'absolute', top: '25%', padding: 10}}>
-      <View style={{flexDirection: 'row'}}>
+      <View>
+    <View style={{position:'absolute', top: 325, padding: 10, width:'100%'}}>
+      <View style={{flexDirection: 'row', alignItems:'center', justifyContent:'space-between', paddingHorizontal: 45}}>
         <Pressable onPress={() => props.navigation.navigate(SetAddress)} style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
           <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
             <IconIonic name='home' color='teal' size={22}></IconIonic>
@@ -59,7 +59,7 @@ const DestinationSearch = (props) => {
         </Pressable>
       </View>
       
-      <View style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
+      <View style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5, justifyContent:'center'}}>
           <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
             <IconIonic name='search' color='teal' size={22}></IconIonic>
           </Card>
@@ -69,7 +69,7 @@ const DestinationSearch = (props) => {
       </View>
 
 
-<View style={{alignItems: 'center', top: '60%'}}>
+<View style={{alignItems: 'center', top: 450}}>
 <TouchableOpacity onPress={() => navigation.navigate(ConfirmPage)} style={styles.button}>
                         
                         <Text style={{color: 'teal', fontSize: 15}}>Continue</Text>
@@ -141,6 +141,8 @@ const DestinationSearch = (props) => {
 
         {/* Square near Destination input */}
         <View style={styles.square} />
+
+      </View>
 
       </View>
                     {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>

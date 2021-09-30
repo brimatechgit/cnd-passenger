@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable, CheckBox } from 'react-native';
+import { View, Text, TextInput, Pressable, CheckBox,Image, } from 'react-native';
 import {Card} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -25,6 +25,9 @@ const LoginPage = props => {
 
     return ( 
         <View style={{flex:1, padding: 20}}>
+
+            
+
             <View>
                 <Text style={styles.text}>Welcome Back</Text>
                 <Text style={{fontSize: 15, color: 'teal'}}>Please Enter Your Number</Text>
@@ -96,7 +99,15 @@ const LoginPage = props => {
 
 
             <Button text='Continue' navPage='Verification' navigation={props.navigation}></Button>
+
+            <View style={{height: '5%'}}>
+                <Image 
+                style={{flex: 1, width: 50, height:50 }}
+                resizeMode = 'contain'
+                source={require('../../assets/images/1.png')} />
+            </View>
         </View>
+     
      );
 }
  

@@ -109,6 +109,8 @@ const Verification = props => {
 
                     <Button text='Continue' navPage='HomePage' navigation={props.navigation}></Button>
         </View>
+     
+     
      );
 }
  

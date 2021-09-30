@@ -45,7 +45,7 @@ const styles = StyleSheet.create ({
         elevation: 3,
         backgroundColor: 'white',
         borderRadius: 50,
-        height: 45,
+        height: 40,
         width: '45%',
         alignItems: 'center',
         justifyContent: 'center',
