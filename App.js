@@ -107,7 +107,7 @@ export default function App() {
         header: CustomNavigationBar,
       }}
       >
-        <Stack.Screen name="LandingPage" options={horizontalAnimation} component={LandingPage} />
+        <Stack.Screen options={{headerShown: false}} name="LandingPage"  component={LandingPage} />
         <Stack.Screen name="RegisterPage" component={RegisterPage} />
         <Stack.Screen name="LoginPage" options={horizontalAnimation} component={LoginPage} />
         <Stack.Screen name="Verification" component={Verification} />
@@ -137,7 +137,7 @@ export default function App() {
         <Stack.Screen name="PromotionPage" component={PromotionPage} />
         <Stack.Screen name="InviteFriendsPage" component={InviteFriendsPage} />
         <Stack.Screen name="InviteTermsPage" component={InviteTermsPage} />
-        <Stack.Screen name="SplashPage"  component={SplashPage} />
+        <Stack.Screen options={{headerShown: false}} name="SplashPage"  component={SplashPage} />
         <Stack.Screen name="AboutPage" component={AboutPage} />
         <Stack.Screen name="PromoPage" component={PromoPage} />
         <Stack.Screen name="SetAddress" component={SetAddress} />

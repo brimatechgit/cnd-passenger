@@ -1,11 +1,11 @@
 import { Appbar } from 'react-native-paper';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { ImageBackground, Image } from 'react-native';
+import { ImageBackground, Image,Pressable } from 'react-native';
 // import IMAGENAME from './assets/image'
 // import Image from './src/assets/images/'
 
-function CustomNavigationBar() {
+function CustomNavigationBar(props) {
   return (
     <Appbar.Header style={{backgroundColor: 'teal'}}>
       {/* <ImageBackground
