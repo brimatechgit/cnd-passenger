@@ -1,5 +1,6 @@
 import { Appbar } from 'react-native-paper';
 import React from 'react';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { ImageBackground, Image } from 'react-native';
 // import IMAGENAME from './assets/image'
 // import Image from './src/assets/images/'
@@ -10,6 +11,9 @@ function CustomNavigationBar() {
       {/* <ImageBackground
         source={IMAGENAME}
       ></ImageBackground> */}
+
+
+<Pressable style={{paddingLeft:10}} onPress={()=>props.navigation.pop()}><Icon name='arrow-back' color='white' size={35}/></Pressable>
 
 <Image 
 style={{flex: 1, }}
