@@ -11,11 +11,19 @@ import HistoryPage from './HistoryPage/HistoryPage';
 import PromotionPage from './Promotions/PromotionPage';
 import SafetyPage from './Safety Centre/SafetyPage';
 import SupportChat from './SupportChat/SupportChat';
-// import { FAB } from 'react-native-paper';
+import Modal from "react-native-modal";
 import styles from './styles';
 import InviteFriendsPage from './inviteFriends/inviteFriends';
+import HomePage from '../HomePage/HomePage';
 
 const AccountPage = props => {
+
+    const [isModalVisible, setModalVisible] = React.useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!isModalVisible);
+    }
+
     return ( 
         <View>
 
@@ -109,7 +117,7 @@ const AccountPage = props => {
                         <Pressable  style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
                         </View>
                     </Pressable>
-                    <Pressable style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                    <Pressable onPress={onPress={toggleModal}} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
                         <View style={styles.leadIcon}><Icon name="log-out" size={30} color='red'></Icon></View>
                         <View style={styles.textContainer}>
 
@@ -119,12 +127,55 @@ const AccountPage = props => {
                 </View>
             </View>
 
-            {/* <FAB
-            style={styles.fab}
-            small
-            icon="plus"
-            onPress={() => console.log('Pressed')}>
-    </FAB> */}
+
+            <Modal isVisible={isModalVisible}
+                            hasBackdrop={false}
+                        >
+                            <View style={{
+                                left: 10,
+                                height: 300,
+                                width: 300,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderColor: '#ccc',
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                backgroundColor: 'white',
+                                elevation: 20,
+                                padding: 15,
+                                borderRadius: 25,
+                            }}>
+                                <View style={{padding: 10, alignItems:'center'}}>
+                                    <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red'}}>Cancel Your Pick up</Text>
+
+                                    <Text style={{textAlign:'center'}}>
+                                        Are you sure you want to Log out?
+                                    </Text>
+                                
+                                
+                                </View>
+
+                                <View style={{flexDirection:'row'}}>
+
+                                    <TouchableOpacity onPress={toggleModal} style={[styles.button, {margin:5}]}>
+                        
+                                        <Text style={{color: 'teal', fontSize: 15}}>No</Text>
+                                    
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5}]}>
+                        
+                                        <Text style={{color: 'teal', fontSize: 15}}>Yes, Cancel</Text>
+                                    
+                                    </TouchableOpacity>
+                                </View>
+
+                            </View>
+
+
+                    
+                    </Modal>
+
+            
         </View>
      
      
