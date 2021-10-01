@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Pressable } from 'react-native';
+import { View, Text, TouchableOpacity, Pressable, Image } from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -15,6 +15,7 @@ import Modal from "react-native-modal";
 import styles from './styles';
 import InviteFriendsPage from './inviteFriends/inviteFriends';
 import HomePage from '../HomePage/HomePage';
+import LandingPage from '../LandingPage/LandingPage';
 
 const AccountPage = props => {
 
@@ -29,9 +30,10 @@ const AccountPage = props => {
 
             <View style={{height: "35%", backgroundColor: 'teal', }}>
                 <View style={{top: "18%", flexDirection:'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <View style={{borderRadius: 50, backgroundColor: 'white', width: 80, height: 80, alignItems:'center', justifyContent: 'center'}}>
-                        <Icon name='person' size={40} style={{color:'teal'}}></Icon>
-                    </View>
+                    <Image 
+                        style={{width:100, height:75}}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/UsersIcon.png')} />
                     <View style={{justifyContent: 'center', padding: 20}}>
                         <Text style={{color: 'white', fontSize: 22, fontWeight: '600'}}>Name and Surname</Text>
                         <Text style={{color: 'white', fontSize: 15}}>name@gmail.com | Mobile</Text>
@@ -43,7 +45,11 @@ const AccountPage = props => {
                 <View style={{paddingTop:5}}>
 
                     <Pressable onPress={() => props.navigation.navigate(AccountCardDetailsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10, justifyContent: 'space-between'}}>
-                        <View style={styles.leadIcon}><Icon name="card" size={30}></Icon></View>
+                    <Image 
+                        style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/AddPayment.png')} />
+                        
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>Payment Method</Text>
@@ -51,7 +57,10 @@ const AccountPage = props => {
                         </View>
                     </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(PromotionPage)} style={{padding: 5, flexDirection: 'row', elevation: 10, justifyContent: 'space-between'}}>
-                        <View style={styles.leadIcon}><MIcon name="support-agent" size={30}></MIcon></View>
+                    <Image 
+                          style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/Promotion.png')} />
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>Promotion</Text>
@@ -61,7 +70,10 @@ const AccountPage = props => {
                     
                     
                     <Pressable onPress={() => props.navigation.navigate(HistoryPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="stats-chart" size={30}></Icon></View>
+                    <Image 
+                    style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/History.png')} />
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>History</Text>
@@ -69,7 +81,10 @@ const AccountPage = props => {
                         </View>
                     </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(AboutPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="md-newspaper-sharp" size={30}></Icon></View>
+                    <Image 
+                          style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/About.png')} />
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>About</Text>
@@ -77,15 +92,23 @@ const AccountPage = props => {
                         </View>
                     </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(ChangePassword)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="key" size={30}></Icon></View>
+                    <Image 
+                       style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/changePass.png')} />
                         <View style={styles.textContainer}>
+
+                      
 
                         <Text style={styles.text}>Change Password</Text>
                         <Pressable style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
                         </View>
                     </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(InviteFriendsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="person-add" size={30}></Icon></View>
+                    <Image 
+                         style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/InviteFriends.png')} />
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>Invite Friends</Text>
@@ -94,8 +117,12 @@ const AccountPage = props => {
                     </Pressable>
                     
                     <Pressable onPress={() => props.navigation.navigate(SupportChat)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><MaterialIcons name="support-agent" size={30}></MaterialIcons></View>
-                        <View style={styles.textContainer}>
+                        <Image 
+                            style={styles.img}
+                            resizeMode = 'contain'
+                            source={require('../../assets/images/SupportSettings.png')} />
+                        <View style={styles.textContainer}> 
+                      
 
                         <Text style={styles.text}>Support</Text>
                         <Pressable style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
@@ -103,15 +130,23 @@ const AccountPage = props => {
                     </Pressable>
                     
                     <Pressable onPress={() => props.navigation.navigate(SafetyPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="shield" size={30}></Icon></View>
+                    <Image 
+                          style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/SafetyCentreSmall.png')} />
                         <View style={styles.textContainer}>
+
+                       
 
                         <Text style={styles.text}>Safety Centre</Text>
                         <Pressable  style={{right: '80%'}}><Icon name="chevron-forward" style={styles.icon}></Icon></Pressable>
                         </View>
                     </Pressable>
                     <Pressable onPress={toggleModal} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="log-out" size={30} color='red'></Icon></View>
+                    <Image 
+                          style={styles.img}
+                        resizeMode = 'contain'
+                        source={require('../../assets/images/Logout.png')} />
                         <View style={styles.textContainer}>
 
                         <Text style={styles.text}>Log out</Text>
@@ -156,7 +191,7 @@ const AccountPage = props => {
                                         <Text style={{color: 'teal', fontSize: 15}}>No</Text>
                                     
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5, borderColor:'red'}]}>
+                                    <TouchableOpacity onPress={() => {props.navigation.navigate(LandingPage),  setModalVisible(false)}} style={[styles.button, {margin:5, borderColor:'red'}]}>
                         
                                         <Text style={{color: 'red', fontSize: 15}}>Yes, Log out</Text>
                                     

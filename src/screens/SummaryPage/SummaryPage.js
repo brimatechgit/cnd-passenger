@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Text, TextInput, Pressable, Image } from 'react-native';
 import { Card,RadioButton } from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker'
 import styles from './styles';
@@ -83,13 +83,16 @@ const SummaryPage = props => {
 
 
             <View style={{...styles.rowView, padding: 10, paddingVertical: 25}}>
-                    <Card style={{...styles.circularIcon, width: 45, height: 45}}>
-                        <View style={{justifyContent: 'center', alignItems: 'center', top: 6}}>
+                
+                        <View style={{justifyContent: 'center', alignItems: 'center', bottom:2}}>
 
-                            <Icon name='credit-card' size={30}></Icon>
+                        <Image 
+style={{width:50, height:50}}
+  resizeMode = 'contain'
+source={require('../../assets/images/AddPayment.png')} />
                         </View>
                     
-                    </Card>
+                   
                     <View style={{right: 30}}>
                         <Text style={{color: 'teal', fontWeight:'bold', fontSize: 14}}>Add Payment Method</Text>
                         <Text style={{color: 'grey', fontWeight:'600', fontSize: 12}}>Credit / Debit Card</Text>

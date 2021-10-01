@@ -11,7 +11,7 @@ import Button from '../../compnents/Button/Button';
 
 const LoginPage = props => {
 
-    const [mobile, onChangeMobile] = React.useState();
+    const [mobile, onChangeMobile] = React.useState('');
     const [isSelected, setSelection] = useState(false);
 
 
@@ -83,10 +83,16 @@ const LoginPage = props => {
             <View style={{height: 15}}></View>
             <View >
                 <Text style={{fontSize: 15, color: 'teal'}}>Or sign in with Socials</Text>
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection:'row'}}>
                     {/* Add Social icons here */}
-                    <IconIonic name='logo-google' color='tomato' size={25} style={{padding: 5}}></IconIonic>
-                    <IconIonic name='logo-facebook' color='royalblue' size={25} style={{padding: 5}}></IconIonic>
+                    <Image 
+style={{height: 30, padding:0, width: 30, margin:5}}
+  resizeMode = 'contain'
+source={require('../../assets/images/Facebook.png')} />
+                    <Image 
+style={{ height: 30, width: 30, margin:5}}
+  resizeMode = 'contain'
+source={require('../../assets/images/Google.png')} />
                     
                 </View>
             </View>
@@ -100,12 +106,7 @@ const LoginPage = props => {
 
             <Button text='Continue' navPage='Verification' navigation={props.navigation}></Button>
 
-            <View style={{height: '5%'}}>
-                <Image 
-                style={{flex: 1, width: 50, height:50 }}
-                resizeMode = 'contain'
-                source={require('../../assets/images/1.png')} />
-            </View>
+           
         </View>
      
      );

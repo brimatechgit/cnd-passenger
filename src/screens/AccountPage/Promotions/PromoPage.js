@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, TextInput, Pressable, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Pressable, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
 
 
@@ -10,14 +10,18 @@ const PromoPage = ({navigation, route}) => {
 
     return ( 
         <View style={{flex:1, padding: 10, alignItems:'center'}}>
-            <View style={{alignItems:'center', padding: 15}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row'}}>
+            <Image 
+                          style={{height: 25, width: 25}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/Promotion2.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>{route.params.title}</Text>
             </View>
 
-            <View style={{borderRadius: 50, padding: 25, borderColor: 'red', borderWidth: 1, marginVertical: 10}}>
-                <Text style={{fontSize:32}}>50%</Text>
-                <Text style={{fontSize:32}}>OFF</Text>
-            </View>
+            <Image 
+                          style={{height: '35%', width: '55%'}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/50.png')} />
 
             <View style={{alignItems:'center'}}>
                 <Text style={styles.subTitle}>Enter Promo code to redeem</Text>

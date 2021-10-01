@@ -1,5 +1,5 @@
 import React from 'react'
-import { View,Text,Pressable } from 'react-native';
+import { View,Text,Pressable, Image } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Modal from "react-native-modal";
@@ -58,12 +58,29 @@ const HistorySummary = () => {
             </Card>
             </View>
 
+
+            
+
+
             <View style={{position:'absolute', width: '100%', top: '1%'}}>
 
-                <Card style={{elevation: 10,  left: '2%',alignItems:'center', borderRadius: 25, padding: 10}}>
-                    <Text style={styles.title}>History</Text>
+          
+                <Card style={{elevation: 10,  left: '2%',alignItems:'center', borderRadius: 25, padding: 10, }}>
+                <View style={{flexDirection:'row',  width:'65%'}}>
+                <View style={{position:'absolute', right:'75%', bottom: -18}}>
+                <Image 
+                                style={{height: 65, width: 50}}
+                                resizeMode = 'contain'
+                                source={require('../../../assets/images/History.png')} />
+            </View>
+                    
+                        <Text style={styles.title}>History</Text>
+
+                </View>
                 </Card>
             </View>
+
+            
 
 
             <Modal isVisible={isModalVisible}

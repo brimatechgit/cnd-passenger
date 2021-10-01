@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text,TextInput, TouchableOpacity } from 'react-native';
+import { View, Text,TextInput, TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
@@ -15,7 +15,11 @@ const AboutPage = () => {
 
     return ( 
         <View style={{flex:1, padding: 20}}>
-            <View style={{alignItems:'center', padding: 15}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+                          style={{height: 35, width: 35}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/About2.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>About</Text>
             </View>
 

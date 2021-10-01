@@ -22,7 +22,10 @@ source={require('../../../assets/images/landingLogo.png')} />
             </View>
 
             <Text style={{color:'teal', fontWeight:'bold'}}>Powered by</Text>
-            <Text style={{fontSize: 25}}>brima<Text style={{color:'steelblue', fontSize: 25}}>tech</Text></Text>
+            <Image 
+style={{flex: 1, width: 150}}
+  resizeMode = 'contain'
+source={require('../../../assets/images/brimaLogo.png')} />
         </View>
      );
 }

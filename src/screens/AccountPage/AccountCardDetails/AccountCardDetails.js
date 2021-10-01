@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Text, TextInput, Pressable,Image } from 'react-native';
 import {Card}from 'react-native-paper';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import  IconIon  from 'react-native-vector-icons/Ionicons';
@@ -16,7 +16,11 @@ const AccountCardDetailsPage = props => {
 
     return ( 
         <View style={{flex:1, padding: 10}}>
-            <View style={{alignItems:'center', padding: 15}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+                          style={{height: 25, width: 25}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/Promotion2.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Card Details</Text>
             </View>
 

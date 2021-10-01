@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,TextInput, TouchableOpacity } from 'react-native';
+import { View, Text,TextInput, TouchableOpacity, Image } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -13,7 +13,11 @@ const ChangePassword = () => {
 
     return ( 
         <View style={{padding: 10}}>
-            <View style={{alignItems:'center', padding: 15}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+                          style={{height: 35, width: 35}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/password.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Change Password</Text>
             </View>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
@@ -9,7 +9,11 @@ import styles from './styles';
 const SupportChat = () => {
     return ( 
         <View style={{flex:1, padding: 15, alignItems:'center'}}>
-            <View style={{alignItems:'center'}}>
+            <View style={{alignItems:'center', flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+                          style={{height: 25, width: 25}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/Support.png')} />
                 <Text style={{fontSize: 22, fontWeight: '800', color: 'teal'}}>Support</Text>
             </View>
 

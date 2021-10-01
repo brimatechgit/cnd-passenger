@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable,Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
 import Button from '../../../compnents/Button/Button';
 import InviteTermsPage from './inviteTerms';
@@ -8,11 +8,18 @@ import InviteTermsPage from './inviteTerms';
 const InviteFriendsPage = (props) => {
     return ( 
         <View style={{flex:1, padding: 15, alignItems:'center'}}>
-            <View style={{alignItems:'center', padding: 15}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row'}}>
+            <Image 
+                          style={{height: 25, width: 25}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/Promotion2.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Invite Friends</Text>
             </View>
 
-            <Icon name='persons' size={75}></Icon>
+            <Image 
+                          style={{height: 75, width: 75}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/InviteIcon.png')} />
 
             <View style={{alignItems:'center', paddingVertical:15}}>
                 <Text style={{fontWeight:'bold', fontSize:18, color:'teal', paddingVertical:5}}>Get free delivery!</Text>

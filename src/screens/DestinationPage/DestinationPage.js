@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, TextInput, SafeAreaView, Text, Pressable, TouchableOpacity} from 'react-native';
+import {View, TextInput, SafeAreaView, Text, Pressable, TouchableOpacity, Image} from 'react-native';
 import  {GooglePlacesAutocomplete}  from 'react-native-google-places-autocomplete';
 import  {useNavigation}  from '@react-navigation/native';
 import IconIonic from 'react-native-vector-icons/Ionicons';
@@ -60,9 +60,10 @@ const DestinationSearch = (props) => {
       </View>
       
       <View style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5, justifyContent:'center'}}>
-          <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
-            <IconIonic name='search' color='teal' size={22}></IconIonic>
-          </Card>
+          <Image 
+    style={{height: 35, width: 35 }}
+      resizeMode = 'contain'
+    source={require('../../assets/images/chooseMap.png')} />
             <Text style={{color:'teal'}}>Choose on the map</Text>
         </View>
 

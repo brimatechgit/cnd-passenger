@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable, CheckBox } from 'react-native';
+import { View, Text, TextInput, Pressable, CheckBox,Image } from 'react-native';
 import {Card} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -80,8 +80,14 @@ const VerifyNumber = props => {
                 <Text style={{fontSize: 17, color: 'teal'}}>Or sign in with Socials</Text>
                 <View style={{flexDirection: 'row'}}>
                     {/* Add Social icons here */}
-                    <IconIonic name='logo-google' color='tomato' size={25} style={{padding: 5}}></IconIonic>
-                    <IconIonic name='logo-facebook' color='royalblue' size={25} style={{padding: 5}}></IconIonic>
+                                        <Image 
+                    style={{height: 30, padding:0, width: 30, margin:5}}
+                    resizeMode = 'contain'
+                    source={require('../../../../assets/images/Facebook.png')} />
+                                        <Image 
+                    style={{ height: 30, width: 30, margin:5}}
+                    resizeMode = 'contain'
+                    source={require('../../../../assets/images/Google.png')} />
                     
                 </View>
             </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Dimensions, Pressable } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Dimensions, Pressable, Image } from 'react-native';
 import {Card}from 'react-native-paper';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import PickUpLocationDetails from '../../screens/DestinationPage/PickUpDetails/PickUpDetails';
@@ -14,12 +14,22 @@ const RequestCard = props => {
     const deliSmallText = 'For a successful delivery, please make sure your package is under 30kgs, securely sealed and not a prohibited item.';
     const [isModalVisible, setModalVisible] = React.useState(false);
     const [isModalVisibleSmall, setModalVisibleSmall] = React.useState(false);
+    const [parcel, setParcel] = React.useState('none')
+    const [bkg, setBkg] = React.useState('white');
+    const [bkgSmall, setBkgSmall] = React.useState('');
 
     const toggleModal = () => {
         setModalVisible(!isModalVisible);
+        (bkg != 'gray') ? setBkg('gray') : setBkg('white');
+        (bkg == 'gray') ? setBkg('white') : setBkg('gray');
+
+
       };
     const toggleSmallModal = () => {
         setModalVisibleSmall(!isModalVisibleSmall);
+      };
+    const toggleParcel = () => {
+        setBkg('gray')
       };
 
     return ( 
@@ -30,10 +40,11 @@ const RequestCard = props => {
             <View style={{justifyContent:'center', flexDirection: 'row', alignItems:'center'}}>
                     {/* dot icon here */}
                     {/* <View style={styles.circle} /> */}
-
-                    <Card style={{borderRadius: 50, justifyContent: 'center', alignItems:'center', padding: 10}}>
-                        <Icon name='directions-car' size={30}></Icon>
-                    </Card>
+                    <Image 
+style={{width:45, height:45}}
+  resizeMode = 'contain'
+source={require('../../assets/images/CNDbike.png')} />
+                
                     
                 <Card style={{elevation: 5, borderRadius: 25, padding:2, width: '85%', margin: 5}} onPress={toggleSmallModal}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
@@ -56,11 +67,14 @@ const RequestCard = props => {
                     {/* dot icon here */}
                     {/* <View style={styles.circle} /> */}
 
-                    <Card style={{borderRadius: 50, justifyContent: 'center', alignItems:'center', padding: 10}}>
-                        <Icon name='directions-car' size={30}></Icon>
-                    </Card>
+                   
+                    <Image 
+style={{width:45, height:45}}
+  resizeMode = 'contain'
+source={require('../../assets/images/CNDMOTOR.png')} />
+         
                     
-                <Card style={{elevation: 5, borderRadius: 25, padding:2, width: '85%', margin: 5}} onPress={toggleModal}>
+                <Card style={{elevation: 5, borderRadius: 25, padding:2, width: '85%', margin: 5,}} onPress={toggleModal}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
 
                         <View style={{flexDirection:'row', alignItems:'center'}}>
@@ -110,7 +124,7 @@ const RequestCard = props => {
                                     <Text style={{fontSize:12}}>Documents, shoe box, laptop etc</Text>
                                     <View style={{flexDirection:'row', paddingTop:10}}>
                                         <Text>Package Delivery </Text> 
-                                        <Pressable style={{ justifyContent: 'center'}}><Text style={{color:'teal',}}>Terms & Conditions</Text></Pressable>
+                                        <Pressable style={{ justifyContent: 'center'}} ><Text style={{color:'teal',}}>Terms & Conditions</Text></Pressable>
 
                                     </View>
                                 

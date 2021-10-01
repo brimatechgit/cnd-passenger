@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,Text, Pressable} from 'react-native';
+import { View,Text, Pressable, Image} from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Octicons from 'react-native-vector-icons/Octicons';
@@ -8,7 +8,11 @@ import styles from './styles';
 const SafetyPage = (props) => {
     return ( 
         <View style={{flex:1, padding: 15, alignItems:'center'}}>
-            <View style={{alignItems:'center'}}>
+            <View style={{alignItems:'center', flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+                          style={{height: 45, width: 45}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/SafetyCentre.png')} />
                 <Text style={{fontSize: 22, fontWeight: '800', color: 'teal'}}>Safety Centre</Text>
             </View>
 

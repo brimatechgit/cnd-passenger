@@ -14,7 +14,7 @@ const RegisterPage = props => {
     const [sname, onChangeSname] = React.useState('');
     const [fname, onChangeFname] = React.useState("");
     const [email, onChangeEmail] = React.useState("");
-    const [password, onChangePassword] = React.useState();
+    const [password, onChangePassword] = React.useState('');
 
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
