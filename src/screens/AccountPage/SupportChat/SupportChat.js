@@ -11,9 +11,9 @@ const SupportChat = () => {
         <View style={{flex:1, padding: 15, alignItems:'center'}}>
             <View style={{alignItems:'center', flexDirection:'row', justifyContent:'center'}}>
             <Image 
-                          style={{height: 25, width: 25}}
+                          style={{height: 45, width: 45}}
                         resizeMode = 'contain'
-                        source={require('../../../assets/images/Support.png')} />
+                        source={require('../../../assets/images/SupportSettings.png')} />
                 <Text style={{fontSize: 22, fontWeight: '800', color: 'teal'}}>Support</Text>
             </View>
 

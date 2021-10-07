@@ -25,7 +25,7 @@ const PromoPage = ({navigation, route}) => {
 
             <View style={{alignItems:'center'}}>
                 <Text style={styles.subTitle}>Enter Promo code to redeem</Text>
-                <Text style={styles.subTitle}>the 50 percent off your delivery</Text>
+                <Text style={styles.subTitle}>the 50% off your delivery</Text>
             </View>
 
             <Text style={[styles.subTitle, {fontWeight:'bold'}]}>4 Days Left!</Text>

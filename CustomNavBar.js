@@ -16,7 +16,7 @@ function CustomNavigationBar(props) {
 <Pressable style={{}} onPress={()=>props.navigation.pop()}><Icon name='arrow-back' color='white' size={35}/></Pressable>
 
 <Image 
-style={{flex: 1, right: '25%'}}
+style={{flex: 1, right: '25%', width:25, height: 35}}
   resizeMode = 'contain'
 source={require('./src/assets/images/userLogo.png')} />
       {/* <Appbar.Content title="Click n Deliver" style={{alignItems: 'center', justifyContent: 'center', }}/> */}

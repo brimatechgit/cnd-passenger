@@ -44,7 +44,7 @@ const DestinationSearch = (props) => {
     <SafeAreaView>
       <View>
     <View style={{position:'absolute', top: 325, padding: 10, width:'100%'}}>
-      <View style={{flexDirection: 'row', alignItems:'center', justifyContent:'space-between', paddingHorizontal: 45}}>
+      <View style={{flexDirection: 'row', alignItems:'center', justifyContent:'space-between', paddingHorizontal: 65}}>
         <Pressable onPress={() => props.navigation.navigate(SetAddress)} style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
           <Card style={{borderRadius: 50, padding: 5, elevation:10, margin: 5}}>
             <IconIonic name='home' color='teal' size={22}></IconIonic>
@@ -61,7 +61,7 @@ const DestinationSearch = (props) => {
       
       <View style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5, justifyContent:'center'}}>
           <Image 
-    style={{height: 35, width: 35 }}
+    style={{height: 35, width: 35, paddingHorizontal: 5 }}
       resizeMode = 'contain'
     source={require('../../assets/images/chooseMap.png')} />
             <Text style={{color:'teal'}}>Choose on the map</Text>

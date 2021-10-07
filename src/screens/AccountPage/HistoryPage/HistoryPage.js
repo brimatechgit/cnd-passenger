@@ -16,9 +16,9 @@ const HistoryPage = (props) => {
         <View style={{flex:1, padding: 10}}>
             <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
             <Image 
-                          style={{height: 25, width: 25, paddingHorizontal:10}}
+                          style={{height: 45, width: 45, paddingHorizontal:10}}
                         resizeMode = 'contain'
-                        source={require('../../../assets/images/History2.png')} />
+                        source={require('../../../assets/images/History.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>History</Text>
             </View>
 

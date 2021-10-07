@@ -18,9 +18,9 @@ const AccountCardDetailsPage = props => {
         <View style={{flex:1, padding: 10}}>
             <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
             <Image 
-                          style={{height: 25, width: 25}}
+                          style={{height: 45, width: 45}}
                         resizeMode = 'contain'
-                        source={require('../../../assets/images/Promotion2.png')} />
+                        source={require('../../../assets/images/AddPayment.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Card Details</Text>
             </View>
 

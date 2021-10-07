@@ -52,7 +52,7 @@ const HistorySummary = () => {
 
 
                 <View style={{flexDirection:'row', justifyContent:'space-between', paddingTop: 45}}>
-                    <Text style={{color:'teal'}}>Amount to be paid</Text>
+                    <Text style={{color:'teal'}}>Amount paid</Text>
                     <Text style={{fontWeight:'bold', color:'teal'}}>R60</Text>
                 </View>
             </Card>

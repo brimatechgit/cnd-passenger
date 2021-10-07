@@ -5,14 +5,20 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Modal from "react-native-modal";
 import styles from './styles';
 import HomePage from '../../screens/HomePage/HomePage';
+import ChatPage from './ChatPage/ChatPage';
 
 const ConnectDriver = (props) => {
 
 
     const [isModalVisible, setModalVisible] = React.useState(false);
-
+    const [isChatVisible, setChatVisible] = React.useState(false);
+    const [chatState, setChatState] = React.useState(false);
+    
     const toggleModal = () => {
         setModalVisible(!isModalVisible);
+    }
+    const toggleChat = () => {
+        setChatState(!chatState);
     }
 
     const [open, setOpen] = useState(false);
@@ -23,13 +29,23 @@ const ConnectDriver = (props) => {
         {label: 'Other', value: 'Other'}
       ]);
 
+      const chatPage = () => {
+          <View style={styles.container}>
+              <Text>Text hereeeee</Text>
+          </View>
+      }
+
 
     return ( 
         <View style={styles.container}>
+
+            {
+                chatState ? chatPage() : <View></View>
+            }
             
-            <View style></View>
+            <View></View>
             <View style={{flexDirection:'row', paddingTop: 25}}>
-                <Text style={{color:'teal', fontSize: 22, fontWeight: 'bold'}}>Clickie | SNH 55GP</Text>
+                <Text style={{color:'teal', fontSize: 22, fontWeight: 'bold'}}>CnD-Motor | SNH 55GP</Text>
 
                 
             </View>
@@ -44,10 +60,12 @@ const ConnectDriver = (props) => {
                         <View style={styles.leadIcon}><Icon name="close" color='red' size={30}></Icon></View>
                         <Text>Cancel Pick Up</Text>      
                     </Pressable>
-                    <View style={{flexDirection:'column', alignItems:'center'}}>
+
+
+                    <Pressable onPress={toggleChat} style={{flexDirection:'column', alignItems:'center'}}>
                         <View style={[styles.leadIcon, {left: 0}]}><Icon name="md-chatbubbles" color='teal' size={30}></Icon></View>
                         <Text>Chat</Text>      
-                    </View>
+                    </Pressable>
             </View>
 
 
@@ -96,7 +114,7 @@ const ConnectDriver = (props) => {
 
                                 <View style={{flexDirection:'row'}}>
 
-                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5}]}>
+                                    <TouchableOpacity onPress={toggleModal} style={[styles.button, {margin:5}]}>
                         
                                         <Text style={{color: 'teal', fontSize: 15}}>No</Text>
                                     
@@ -107,6 +125,31 @@ const ConnectDriver = (props) => {
                                     
                                     </TouchableOpacity>
                                 </View>
+
+                            </View>
+
+
+                    
+                    </Modal>
+            <Modal isVisible={isChatVisible}
+                            hasBackdrop={false}
+                        >
+                            <View style={{
+                                height: 300,
+                                width: 300,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderColor: '#ccc',
+                                position: 'absolute',
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                backgroundColor: 'white',
+                                elevation: 20,
+                                padding: 15,
+                                borderRadius: 25,
+                            }}>
+                                
+                                    
 
                             </View>
 

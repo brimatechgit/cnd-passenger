@@ -10,9 +10,9 @@ const InviteFriendsPage = (props) => {
         <View style={{flex:1, padding: 15, alignItems:'center'}}>
             <View style={{alignItems:'center', padding: 15, flexDirection:'row'}}>
             <Image 
-                          style={{height: 25, width: 25}}
+                          style={{height: 45, width: 45}}
                         resizeMode = 'contain'
-                        source={require('../../../assets/images/Promotion2.png')} />
+                        source={require('../../../assets/images/InviteFriends.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Invite Friends</Text>
             </View>
 

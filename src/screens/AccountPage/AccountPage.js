@@ -177,7 +177,7 @@ const AccountPage = props => {
 
                                     <View style={{width:'80%'}}>
 
-                                        <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red', textAlign:'center'}}>Are you sure you want to Log out?</Text>
+                                        <Text style={{fontSize: 18, fontWeight:'500', paddingVertical: 10, color:'red', textAlign:'center'}}>Are you sure you want to Log out?</Text>
                                     </View>
 
                                 

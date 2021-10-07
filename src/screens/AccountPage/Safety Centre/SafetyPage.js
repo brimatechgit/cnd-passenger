@@ -12,7 +12,7 @@ const SafetyPage = (props) => {
             <Image 
                           style={{height: 45, width: 45}}
                         resizeMode = 'contain'
-                        source={require('../../../assets/images/SafetyCentre.png')} />
+                        source={require('../../../assets/images/SafetyCentreSmall.png')} />
                 <Text style={{fontSize: 22, fontWeight: '800', color: 'teal'}}>Safety Centre</Text>
             </View>
 

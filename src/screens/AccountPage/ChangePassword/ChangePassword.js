@@ -15,9 +15,9 @@ const ChangePassword = () => {
         <View style={{padding: 10}}>
             <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
             <Image 
-                          style={{height: 35, width: 35}}
+                          style={{height: 45, width: 45}}
                         resizeMode = 'contain'
-                        source={require('../../../assets/images/password.png')} />
+                        source={require('../../../assets/images/changePass.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Change Password</Text>
             </View>
 

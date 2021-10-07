@@ -121,7 +121,7 @@ source={require('../../assets/images/CNDMOTOR.png')} />
                                     <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10}}>Is your Package Ready?</Text>
                                     <Text style={{paddingVertical:10}}>{deliText}</Text>
                                     <Text style={{fontWeight:'bold', }}>Examples of Packages allowed:</Text>
-                                    <Text style={{fontSize:12}}>Documents, shoe box, laptop etc</Text>
+                                        <Text style={{fontSize:12}}>Luggage bag, appliances, home printer etc.</Text>
                                     <View style={{flexDirection:'row', paddingTop:10}}>
                                         <Text>Package Delivery </Text> 
                                         <Pressable style={{ justifyContent: 'center'}} ><Text style={{color:'teal',}}>Terms & Conditions</Text></Pressable>
@@ -163,7 +163,7 @@ source={require('../../assets/images/CNDMOTOR.png')} />
                                     <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10}}>Is your Package Ready?</Text>
                                     <Text style={{paddingVertical:10}}>{deliSmallText}</Text>
                                     <Text style={{fontWeight:'bold', }}>Examples of Packages allowed:</Text>
-                                    <Text style={{fontSize:12}}>Luggage bag, appliances, home printer etc.</Text>
+                                    <Text style={{fontSize:12}}>Documents, shoe box, laptop etc</Text>
                                     <View style={{flexDirection:'row', paddingTop:10}}>
                                         <Text>Package Delivery </Text> 
                                         <Pressable style={{ justifyContent: 'center'}}><Text style={{color:'teal',}}>Terms & Conditions</Text></Pressable>
