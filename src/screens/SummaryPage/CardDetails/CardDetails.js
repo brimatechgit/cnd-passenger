@@ -10,22 +10,46 @@ import BottomHomeNav from '../../../compnents/BottomHomeNav/BottomHomeNav';
 import ConfirmCard from '../../../compnents/ConfirmCard/CornfirmCard';
 import ConfirmPickUp from '../../../compnents/ConfirmPickUp/ConfirmPickUp';
 import ConfirmPickUpPage from './ConfirmPickUpPage/ConfirmPickUpPage';
+import Button from '../../../compnents/Button/Button';
 
 
 
 const CardDetailsPage = props => {
 
+    const [cardName, onChangeCardName] = React.useState("");
     const [cardNum, onChangeCardNum] = React.useState("");
     const [expDate, onChangeExpDate] = React.useState("");
     const [cvv, onChangeCvv] = React.useState("");
 
     return ( 
-        <View style={{flex:1, padding: 10}}>
-            <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Add Card Details</Text>
+        <View style={{flex:1, padding: 15}}>
+            <Text style={{fontSize: 22, fontWeight: 'bold', color: 'teal', paddingVertical:10}}>Add Card Details</Text>
 
-            <Card style={{borderRadius: 25, elevation: 10, height: 250, padding: 15}}>
+            <Card style={{borderRadius: 25, elevation: 10, height: 300, padding: 15}}>
+            <Text style={{fontWeight:'100', padding: 5}}>Card Holder Name</Text>
+                <Card style={{elevation: 10, borderRadius: 25, padding:1}}>
+                        <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
+                        <TextInput
+                                style={styles.inputBottom}
+                                onChangeText={onChangeCardName}
+                                value={cardName}
+                                placeholder='Bri Ma'
+                                keyboardType='default'
+                                color='teal'  
+                            />
+                            
+                            <Card style={{borderRadius: 50, elevation: 10, width: 30, height: 30, alignItems: 'center', right: 5}}>
+                                <View style={{justifyContent: 'center', alignItems: 'center'}}>
+
+                                    <Icon name='close' size={20} style={{top: 4, }}></Icon>
+                                </View>
+                                
+                                </Card>
+                            
+                        </View>
+                </Card>
                 <Text style={{fontWeight:'100', padding: 5}}>Card Number</Text>
-                <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                <Card style={{elevation: 10, borderRadius: 25, padding:1}}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                         <TextInput
                                 style={styles.inputBottom}
@@ -35,10 +59,10 @@ const CardDetailsPage = props => {
                                 keyboardType='number-pad'  
                             />
                             
-                            <Card style={{borderRadius: 50, elevation: 10, width: 35, height: 35, alignItems: 'center', right: 5}}>
+                            <Card style={{borderRadius: 50, elevation: 10, width: 30, height: 30, alignItems: 'center', right: 5}}>
                                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
 
-                                    <Icon name='close' size={20} style={{top: 8, }}></Icon>
+                                    <Icon name='close' size={20} style={{top: 4, }}></Icon>
                                 </View>
                                 
                                 </Card>
@@ -49,9 +73,9 @@ const CardDetailsPage = props => {
 
                 <View style={{height: 10}}></View>
                 <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-                    <View>
-                        <Text>Expiry Date</Text>
-                        <Card style={{width: 100, borderRadius: 50, elevation: 5}}>
+                    <View style={{alignItems:'center'}}>
+                        <Text style={{right:'2%'}}>Expiry Date</Text>
+                        <Card style={{width: 90, borderRadius: 50, elevation: 5,}}>
                         <TextInput
                                 style={styles.inputBottom}
                                 onChangeText={onChangeExpDate}
@@ -62,9 +86,9 @@ const CardDetailsPage = props => {
                             />
                         </Card>
                     </View>
-                    <View>
+                    <View style={{alignItems:'center'}}>
                         <Text>Security Code</Text>
-                        <Card style={{width: 100, borderRadius: 50, elevation: 5}}>
+                        <Card style={{width: 90, borderRadius: 50, elevation: 5}}>
                         <TextInput
                                 style={styles.inputBottom}
                                 onChangeText={onChangeCvv}
@@ -87,12 +111,14 @@ const CardDetailsPage = props => {
             </Card>
 
             <View style={{height: 35}}></View>
-                    <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
+                    {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.button} onPress={() => props.navigation.navigate(ConfirmPickUpPage)}>
-                        {/* props.navigation.navigate(ConfirmPickUpPage) */}
+                        {/* props.navigation.navigate(ConfirmPickUpPage) 
                             <Text style={{color: 'teal', fontSize: 20}}>Proceed to Pay</Text>
                         </Pressable>
-                    </View>
+                    </View> */}
+
+                    <Button text='Proceed to Pay' navPage='ConfirmPickUpPage' navigation={props.navigation}/>
 
                     <View style={{height: 15}}></View>
                     <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>

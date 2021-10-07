@@ -82,22 +82,18 @@ const styles = StyleSheet.create({
         padding: 5
     },
     text: {
-        fontSize: 22, justifyContent: 'center',
+        fontSize: 22, justifyContent: 'center', color:'teal'
         
     },
     inputView: {
-        flexDirection: 'row', justifyContent: 'space-between'
+        flexDirection: 'row', justifyContent: 'space-between', color: 'teal'
     },
     button: {
-        elevation: 3,
-        backgroundColor: 'white',
-        borderRadius: 50,
-        height: 35,
-        width: '45%',
+     
+        elevation: 10, width: '45%',  borderRadius: 25,  borderWidth: 1, borderColor: 'teal',  padding:7,
         alignItems: 'center',
         justifyContent: 'center',
-        borderColor: 'teal',
-        borderWidth: 1,
+       
         
         
     },

@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     },
 
     subTitle: {
-        fontSize: 15,
+        fontSize: 12,
         color: 'red'
     },
     button: {
@@ -127,7 +127,9 @@ const styles = StyleSheet.create({
 
         
     },
-
+    circle: {
+        height: 5, width: 5, backgroundColor:'red', borderRadius: 50, marginRight:5  
+    }, 
 })
 
 export default styles;

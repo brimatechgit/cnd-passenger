@@ -43,29 +43,35 @@ const styles = StyleSheet.create({
   },
 
   circle: {
-    width: 5,
-    height: 5,
-    backgroundColor: 'black',
+    width: 8,
+    height: 8,
+    backgroundColor: 'teal',
     position: 'absolute',
     top: 20,
     left: 15,
     borderRadius: 5,
   },
+  inputBottom: {
+    padding: 5,
+    margin: 5,
+    justifyContent: 'flex-start'
+},
   line: {
     width: 1,
     height: 50,
     backgroundColor: '#c4c4c4',
     position: 'absolute',
     top: 28,
-    left: 17,
+    left: 18,
   },
   square: {
-    width: 5,
-    height: 5,
-    backgroundColor: 'black',
+    width: 8,
+    height: 8,
+    backgroundColor: 'teal',
     position: 'absolute',
     top: 80,
     left: 15,
+    borderRadius: 5
   },
 
   button: {

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Pressable, TextInput } from 'react-native';
 import  {Card}  from 'react-native-paper';
 import HomePage from '../../HomePage/HomePage';
+import Button from '../../../compnents/Button/Button';
 import styles from './styles';
 
 
@@ -21,9 +22,9 @@ const Verification = props => {
         <View style={{flex:1, padding: 20}}>
             <Text style={styles.text}>Enter Verification Code</Text>
             <View style={{height: 15}}></View>
-            <Text>An SMS code was sent to</Text>
+            <Text style={{color: 'teal'}}>An SMS code was sent to</Text>
 
-            <Text style={{fontWeight: 'bold'}}>+27 45 935 9064</Text>
+            <Text style={{fontWeight: 'bold', paddingVertical:10}}>+27 45 935 9064</Text>
 
             <Text style={{color:'teal'}}>Edit Mobile Numbers</Text>
 
@@ -93,18 +94,23 @@ const Verification = props => {
             </View>
             
             <View style={{height: 15}}></View>
-            <View style={{ elevation: 5, width: 220}}>
-                        <Pressable style={styles.button} onPress={() => console.log('sign in')}>
+            <Card style={styles.button} onPress={() => console.log('sign in')}>
+                      
                             <Text style={{color: 'teal', fontSize: 15}}>Resend Code</Text>
-                        </Pressable>
-                </View>
+                        
+                {/* <Button text='Resend Code' navPage='' navigation={props.navigation}></Button> */}
+                </Card>
                 <View style={{height: 35}}></View>
-                    <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
+                    {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
                         <Pressable style={styles.buttonBig} onPress={() => props.navigation.navigate(HomePage)}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
-                    </View>
+                    </View> */}
+
+                    <Button text='Continue' navPage='HomePage' navigation={props.navigation}></Button>
         </View>
+     
+     
      );
 }
  

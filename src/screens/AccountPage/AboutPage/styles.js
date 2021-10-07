@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
         elevation: 5,
         backgroundColor: 'white',
         borderRadius: 50,
-        height: 45,
-        width: 160,
+        height: 25,
+        width: 90,
         alignItems: 'center',
         justifyContent: 'center',
         borderColor:'teal',
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
         padding: 5,
         margin: 5,
         borderBottomColor: 'black',
-        width: 300,
+        borderBottomWidth:1,
+        width: '90%',
         justifyContent: 'flex-start'
     },
 

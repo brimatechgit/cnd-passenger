@@ -46,7 +46,7 @@ const ConfirmCard = props => {
 
                     <TouchableOpacity onPress={() => props.navigation.navigate(PickUpLocationDetails)} style={styles.button}>
                     
-                            <Text style={{color: 'teal', fontSize: 15}}>Confirm Request</Text>
+                            <Text style={{color: 'teal', fontSize: 15}}>Confirm</Text>
                         
                     </TouchableOpacity>
             

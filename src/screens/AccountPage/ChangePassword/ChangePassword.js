@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,TextInput } from 'react-native';
+import { View, Text,TextInput, TouchableOpacity, Image } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -12,8 +12,12 @@ const ChangePassword = () => {
 
 
     return ( 
-        <View>
-            <View style={{alignItems:'center', padding: 15}}>
+        <View style={{padding: 10}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+                          style={{height: 45, width: 45}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/changePass.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Change Password</Text>
             </View>
 
@@ -43,7 +47,7 @@ const ChangePassword = () => {
             </View>
             <View>
                 <Text style={{fontWeight:'100', padding: 5}}>Enter your new password</Text>
-                    <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                    <Card style={{elevation: 10, borderRadius: 25, padding:2, marginVertical: 10}}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                             <TextInput
                                     style={styles.inputBottom}
@@ -63,7 +67,7 @@ const ChangePassword = () => {
                                 
                             </View>
                     </Card>
-                    <Card style={{elevation: 10, borderRadius: 25, padding:2}}>
+                    <Card style={{elevation: 10, borderRadius: 25, padding:2, marginVertical: 10}}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                             <TextInput
                                     style={styles.inputBottom}
@@ -93,9 +97,18 @@ const ChangePassword = () => {
             <View>
                 <Text style={styles.title}>Your password needs to:</Text>
                 <View style={{padding: 15}}>
-                    <Text style={styles.subTitle}>include at least one number or symbol. </Text>
-                    <Text style={styles.subTitle}>include both lower and upper case characters.</Text>
-                    <Text style={styles.subTitle}>be at least 8 characters long.  </Text>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>include at least one number or symbol. </Text>
+                    </View>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>include both lower and upper case characters </Text>
+                    </View>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>be at least 8 characters long. </Text>
+                    </View>
                 </View>
             </View>
 

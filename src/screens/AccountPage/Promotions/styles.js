@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20, justifyContent: 'center',
-        padding: 5
+        padding: 5, color:'teal'
     },
     inputView: {
         flexDirection: 'row', justifyContent: 'space-between'
@@ -89,15 +89,19 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderColor:'teal',
-        borderWidth: 1
-
+        borderWidth: 1,
+        paddingVertical: 10
         
     },
 
     inputBottom: {
-        padding: 5,
+        padding: 10,
         margin: 5,
-        justifyContent: 'flex-start'
+        width: 200,
+        justifyContent: 'center',
+        borderBottomWidth:1,
+        borderColor: 'teal'
+        
     },
 
     dropdown: {
@@ -112,12 +116,13 @@ const styles = StyleSheet.create({
 
     subTitle: {
         fontSize: 15,
-        color: 'teal'
+        color: 'gray'
     },
 
     promoCard: {
         elevation: 10, borderRadius: 25, padding:15, margin: 6
-    }
+    },
+    
 
 })
 

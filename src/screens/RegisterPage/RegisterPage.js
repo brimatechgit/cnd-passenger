@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { View, Text, TextInput, Pressable } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import Button from '../../compnents/Button/Button';
 import TermsAndCo from '../../compnents/TermsAndC/TermsAndC';
 import LoginPage from '../LoginPage/LoginPage';
 import TermsPage from '../TermsPage/TermsPage';
@@ -13,7 +14,7 @@ const RegisterPage = props => {
     const [sname, onChangeSname] = React.useState('');
     const [fname, onChangeFname] = React.useState("");
     const [email, onChangeEmail] = React.useState("");
-    const [password, onChangePassword] = React.useState();
+    const [password, onChangePassword] = React.useState('');
 
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
@@ -94,22 +95,25 @@ const RegisterPage = props => {
                         </View>
                         <View style={{height: 50}}></View>
 
-                <View style={{width: 300, justifyContent:'center', alignItems: 'center',}}>
-                    <Text style={{textAlign: 'center'}}>By clicking sign up you agree to the 
-following <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{color: 'teal', textAlign: 'center'}}>Terms and Conditions</Text></Pressable></Text>
+                <View style={{ justifyContent:'center', alignItems: 'center',}}>
+                    <Text style={{textAlign: 'center'}}>By clicking sign up you agree to our <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{color: 'teal', textAlign: 'center'}}>Terms and Conditions</Text></Pressable></Text>
                 </View>
 
                 <View style={{height: 15}}></View>
 
-                <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, width: 250,left: 30 }}>
+                {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, width: 250,left: 30 }}>
                         <Pressable style={styles.button} onPress={() => props.navigation.navigate(ApprovalPage)}>
                             <Text style={{color: 'teal', fontSize: 20}}>Register</Text>
                         </Pressable>
+                    </View> */}
+
+                    <View style={{alignItems:'center'}}>
+                        <Button text='Sign Up' navPage='ApprovalPage' navigation={props.navigation} ></Button>
                     </View>
 
                     <View style={{height: 15}}></View>
                     <View style={{ justifyContent:'center', alignItems: 'center',}}>
-                    <Text style={{textAlign: 'center'}}>Already have an account? 
+                    <Text style={{textAlign: 'center', fontWeight:'bold'}}>Already have an account? 
                         <Pressable onPress={() => props.navigation.navigate(LoginPage)}><Text style={{color: 'teal', top: 4 }}> Sign In</Text></Pressable></Text>
                 </View>
 

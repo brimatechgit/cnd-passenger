@@ -37,7 +37,23 @@ const styles = StyleSheet.create({
    icon: {
       fontSize: 32,
       color: 'teal',
-   }
+   },
+
+   button: {
+      elevation: 3,
+      backgroundColor: 'white',
+      borderRadius: 50,
+      height: 45,
+      width: '45%',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderColor: 'teal',
+      borderWidth: 1,
+     
+  },
+  img: {
+   width:45, height:45
+  }
 
 });
 
