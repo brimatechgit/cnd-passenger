@@ -9,6 +9,8 @@ import ChatPage from './ChatPage/ChatPage';
 
 const ConnectDriver = (props) => {
 
+    const carType = 'CnD-Motor'
+    const carRegistration = '55 SNH'
 
     const [isModalVisible, setModalVisible] = React.useState(false);
     const [isChatVisible, setChatVisible] = React.useState(false);
@@ -40,12 +42,12 @@ const ConnectDriver = (props) => {
         <View style={styles.container}>
 
             {
-                chatState ? chatPage() : <View></View>
+                chatState ? chatPage : <View></View>
             }
             
             <View></View>
             <View style={{flexDirection:'row', paddingTop: 25}}>
-                <Text style={{color:'teal', fontSize: 22, fontWeight: 'bold'}}>CnD-Motor | SNH 55GP</Text>
+                <Text style={{color:'teal', fontSize: 22, fontWeight: 'bold'}}>{carType} | {carRegistration}</Text>
 
                 
             </View>
@@ -54,7 +56,7 @@ const ConnectDriver = (props) => {
                     {/* dot icon here */}
                     <View style={{flexDirection:'column'}}>
                         <View style={styles.leadIcon}><Icon name="person" size={30}></Icon></View>
-                        <Text>Drivers Name</Text>      
+                        <Text>{props.name}</Text>      
                     </View>
                     <Pressable onPress={toggleModal} style={{flexDirection:'column', paddingHorizontal: 25}}>
                         <View style={styles.leadIcon}><Icon name="close" color='red' size={30}></Icon></View>
@@ -70,6 +72,9 @@ const ConnectDriver = (props) => {
 
 
 
+
+            {/* modal popup reject driver */}
+            {/* cancel order, navigate to driver connected page when driver is < .5km away */}
             <Modal isVisible={isModalVisible}
                             hasBackdrop={false}
                         >
@@ -131,6 +136,7 @@ const ConnectDriver = (props) => {
 
                     
                     </Modal>
+            
             <Modal isVisible={isChatVisible}
                             hasBackdrop={false}
                         >
@@ -148,6 +154,8 @@ const ConnectDriver = (props) => {
                                 padding: 15,
                                 borderRadius: 25,
                             }}>
+
+
                                 
                                     
 
