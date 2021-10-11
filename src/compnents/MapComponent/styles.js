@@ -6,10 +6,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#eee', 
         alignItems: 'center',
         
+        height: Dimensions.get('window').height - 15,
     }, 
     map: {
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
+        
       },
       overlay: {
         position: 'absolute',
@@ -68,6 +70,29 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     padding: 10
+},
+
+circle: {
+  width: 30,
+  height: 30,
+  borderRadius: 15,
+  backgroundColor: 'rgba(68, 154, 235, .4)',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+innerCircle: {
+  width: 18,
+  height: 18,
+  borderRadius: 9,
+  backgroundColor: '#1D1D1D',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+dotCircle: {
+  width: 10,
+  height: 10,
+  borderRadius: 5,
+  backgroundColor: 'rgba(68, 154, 235, 1)',
 },
 })
 
