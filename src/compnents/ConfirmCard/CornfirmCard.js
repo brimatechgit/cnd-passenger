@@ -6,7 +6,7 @@ import PickUpLocationDetails from '../../screens/DestinationPage/PickUpDetails/P
 import ConnectDriverPage from '../../screens/SummaryPage/CardDetails/ConfirmPickUpPage/ConnectDriverPage/ConnectDriverPage';
 import styles from './styles';
 
-const ConfirmCard = props => {
+const ConfirmCard = ({navigation, origin, destination, or}) => {
     return ( 
         <View style={styles.container}>
             <View style={{alignItems:'center'}}>
@@ -27,7 +27,7 @@ const ConfirmCard = props => {
                 <Card style={{elevation: 5, borderRadius: 25, padding:2, width: '85%', margin: 5}}>
                         <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
 
-                        <Text style={{color:'teal', fontSize: 17, fontWeight: 'bold', paddingLeft: 10}}>453 Unicon Villy</Text>
+                        <Text style={{color:'teal', fontSize: 15, paddingLeft: 10}}>{origin.details.vicinity}</Text>
                             
                             <Card style={{borderRadius: 50, elevation: 4, width: 35, height: 35, alignItems: 'center', right: 5}}>
                                 <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -44,7 +44,9 @@ const ConfirmCard = props => {
 
                 <View style={{height: 5}}></View>
 
-                    <TouchableOpacity onPress={() => props.navigation.navigate(PickUpLocationDetails)} style={styles.button}>
+                {/* props.navigation.navigate(PickUpLocationDetails) */}
+
+                    <TouchableOpacity onPress={() => navigation.navigate(PickUpLocationDetails)} style={styles.button}>
                     
                             <Text style={{color: 'teal', fontSize: 15}}>Confirm</Text>
                         

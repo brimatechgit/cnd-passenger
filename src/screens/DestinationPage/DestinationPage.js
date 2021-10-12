@@ -26,19 +26,19 @@ const DestinationSearch = (props) => {
   const navigation = useNavigation();
 
   const checkNavigation = () => {
-    // if (originPlace && destinationPlace) {
+    if (originPlace && destinationPlace) {
+      // console.log(originPlace.data.description);
       
-      
-      // navigation.navigate('PickUpLocationDetails', {
-      //   originPlace,
-      //   destinationPlace,
-      // })
-    // }
+      navigation.navigate('ConfirmPage', {
+        originPlace,
+        destinationPlace,
+      })
+    }
   }
 
-  useEffect(() => {
-    checkNavigation();
-  }, [originPlace, destinationPlace]);
+  // useEffect(() => {
+  //   checkNavigation();
+  // }, [originPlace, destinationPlace]);
 
   return (
     <SafeAreaView>
@@ -71,7 +71,7 @@ const DestinationSearch = (props) => {
 
 
 <View style={{alignItems: 'center', top: 450}}>
-<TouchableOpacity onPress={() => navigation.navigate(ConfirmPage)} style={styles.button}>
+<TouchableOpacity onPress={checkNavigation} style={styles.button}>
                         
                         <Text style={{color: 'teal', fontSize: 15}}>Continue</Text>
                     
@@ -90,8 +90,9 @@ const DestinationSearch = (props) => {
           onPress={(data, details = null) => {
             setOriginPlace({data, details});
           }}
+          
           enablePoweredByContainer={false}
-          suppressDefaultStyles
+          // suppressDefaultStyles
           currentLocation={true}
           currentLocationLabel='Current location'
           styles={{
@@ -102,7 +103,8 @@ const DestinationSearch = (props) => {
           }}
           fetchDetails
           query={{
-            key: 'AIzaSyCXmwaGSpfTHbYJjXmlbnQak3cAdRInBQc',
+            components:'country:za',
+            key: 'AIzaSyCSH6EQada1HpeyGTMQMaEI8rKdgd6QhMc',
             language: 'en',
           }}
           renderRow={(data) => <PlaceRow data={data} />}
@@ -117,7 +119,7 @@ const DestinationSearch = (props) => {
             setDestinationPlace({data, details});
           }}
           enablePoweredByContainer={false}
-          suppressDefaultStyles
+          // suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
             container: {
@@ -128,7 +130,8 @@ const DestinationSearch = (props) => {
           }}
           fetchDetails
           query={{
-            key: 'AIzaSyCXmwaGSpfTHbYJjXmlbnQak3cAdRInBQc',
+            components:'country:za',
+            key: 'AIzaSyCSH6EQada1HpeyGTMQMaEI8rKdgd6QhMc',
             language: 'en',
           }}
           renderRow={(data) => <PlaceRow data={data} />}
