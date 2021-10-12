@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { View, Text, TextInput, Pressable,Image } from 'react-native';
-import {Card} from 'react-native-paper';
+import {Card, Snackbar} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker'
 import styles from './styles';
 import Icon  from 'react-native-vector-icons/Ionicons';
@@ -9,6 +9,16 @@ import SummaryPage from '../../SummaryPage/SummaryPage';
 import ParcelPage from '../ParcelPage/ParcelPage';
 
 const DropOffDetails = props => {
+
+
+    
+    const [visible, setVisible] = React.useState(false);
+
+    const onToggleSnackBar = () => setVisible(!visible);
+  
+    const onDismissSnackBar = () => setVisible(false);
+
+    const [errorMessage, setErrorMsg] = React.useState('Cant submit empty field');
 
     const [streetName, onChangeStreetName] = React.useState('');
     const [contact, onChangeContact] = React.useState('');
@@ -39,6 +49,26 @@ const DropOffDetails = props => {
             setPlaceVals('Hotel name & room no');
         }
       }
+
+      const validator = () => {
+        if(value == 'House'){
+            if(streetName != ''){
+                props.navigation.navigate(ParcelPage)
+            }else {
+              // setErrorMsg('street name and num not given');
+              setVisible(!visible)
+            }
+        } else {
+            if(streetName != '' && complex != ''){
+                props.navigation.navigate(ParcelPage)
+            } else {  
+              // setErrorMsg('Cant submit empty field');
+              setVisible(!visible)
+            }
+        }
+
+
+    }
 
     return ( 
         <View style={{flex: 1, padding: 15}}>
@@ -183,11 +213,20 @@ const DropOffDetails = props => {
 
                 <View style={{height: 35}}></View>
                     <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
-                        <Pressable style={styles.button} onPress={() => props.navigation.navigate(ParcelPage)}>
+                        <Pressable style={styles.button} onPress={validator}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
                     </View>
             </View>
+
+            <Snackbar
+            
+        visible={visible}
+        onDismiss={onDismissSnackBar}
+        style={{backgroundColor:'red', color:'white', borderRadius: 25, alignItems:'center', justifyContent:'center'}}
+        >
+        {errorMessage}
+      </Snackbar>
         </View>
      );
 }

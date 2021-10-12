@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { View, Text, TextInput, Pressable,Image } from 'react-native';
-import {Card} from 'react-native-paper';
+import {Card, Snackbar} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker'
 import styles from './styles';
 import Icon  from 'react-native-vector-icons/Ionicons';
@@ -8,6 +8,13 @@ import PickUpInstructions from './PickUpInstructions/PickUpInstructionsPage';
 import DropOffDetails from '../DropOffDetails/DropOfDetails';
 
 const PickUpLocationDetails = props => {
+
+
+    const [visible, setVisible] = React.useState(false);
+
+    const onToggleSnackBar = () => setVisible(!visible);
+  
+    const onDismissSnackBar = () => setVisible(false);
 
     const [streetName, onChangeStreetName] = React.useState('');
     const [contact, onChangeContact] = React.useState('');
@@ -27,6 +34,9 @@ const PickUpLocationDetails = props => {
       ]);
 
 
+      const [errorMessage, setErrorMsg] = React.useState('Cant submit empty field');
+
+
 
       const changeVals = () => {
         if(value == 'Complex'){
@@ -38,6 +48,26 @@ const PickUpLocationDetails = props => {
         } else if(value == 'Hotel/B&B') {
             setPlaceVals('Hotel name & room no');
         }
+      }
+
+      const validator = () => {
+          if(value == 'House'){
+              if(streetName != ''){
+                props.navigation.navigate(DropOffDetails)
+              }else {
+                // setErrorMsg('street name and num not given');
+                setVisible(!visible)
+              }
+          } else {
+              if(streetName != '' && complex != ''){
+                props.navigation.navigate(DropOffDetails)
+              } else {  
+                // setErrorMsg('Cant submit empty field');
+                setVisible(!visible)
+              }
+          }
+
+
       }
 
 
@@ -162,11 +192,20 @@ const PickUpLocationDetails = props => {
 
                 <View style={{height: 35}}></View>
                     <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
-                        <Pressable style={styles.button} onPress={() => props.navigation.navigate(DropOffDetails)}>
+                        <Pressable style={styles.button} onPress={validator}>
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
                     </View>
             </View>
+
+            <Snackbar
+            
+        visible={visible}
+        onDismiss={onDismissSnackBar}
+        style={{backgroundColor:'red', color:'white', borderRadius: 25, alignItems:'center', justifyContent:'center'}}
+        >
+        {errorMessage}
+      </Snackbar>
         </View>
      );
 }

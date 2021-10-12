@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, Pressable } from 'react-native';
-import {Card}from 'react-native-paper';
+import {Card, Snackbar}from 'react-native-paper';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import  IconIon  from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -16,10 +16,30 @@ import Button from '../../../compnents/Button/Button';
 
 const CardDetailsPage = props => {
 
+    const [visible, setVisible] = React.useState(false);
+
+    const onToggleSnackBar = () => setVisible(!visible);
+  
+    const onDismissSnackBar = () => setVisible(false);
+
+    const [errorMessage, setErrorMsg] = React.useState('Cant submit empty field');
+
     const [cardName, onChangeCardName] = React.useState("");
     const [cardNum, onChangeCardNum] = React.useState("");
     const [expDate, onChangeExpDate] = React.useState("");
     const [cvv, onChangeCvv] = React.useState("");
+
+    const validator = () => {
+        
+        if(cvv != '' && expDate != '' && cardNum != '' && cardName != ''){
+            props.navigation.navigate(SummaryPage)
+        }else {
+          // setErrorMsg('street name and num not given');
+          setVisible(!visible)
+        }
+
+
+}
 
     return ( 
         <View style={{flex:1, padding: 15}}>
@@ -130,6 +150,16 @@ const CardDetailsPage = props => {
                             
                         <Text style={{color: 'teal', fontSize: 12,alignItems: 'center'}}>Secured with SSL encryption technology</Text>
                     </View>
+
+
+                    {/* <Snackbar
+            duration={400}
+            visible={visible}
+            onDismiss={onDismissSnackBar}
+            style={{backgroundColor:'red', color:'white', borderRadius: 25, alignItems:'center', justifyContent:'center'}}
+            >
+            {errorMessage}
+          </Snackbar> */}
         </View>
      );
 }

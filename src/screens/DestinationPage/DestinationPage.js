@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, TextInput, SafeAreaView, Text, Pressable, TouchableOpacity, Image} from 'react-native';
+import {View, TextInput, SafeAreaView, Text, Pressable, TouchableOpacity, Image, Dimensions} from 'react-native';
 import  {GooglePlacesAutocomplete}  from 'react-native-google-places-autocomplete';
 import  {useNavigation}  from '@react-navigation/native';
 import IconIonic from 'react-native-vector-icons/Ionicons';
@@ -7,7 +7,7 @@ import styles from './styles.js';
 import PlaceRow from "./PlaceRow";
 import PickUpLocationDetails from './PickUpDetails/PickUpDetails.js';
 import ConfirmPage from './ConfirmPage/ConfirmPage.js';
-import { Card } from 'react-native-paper';
+import { Card, Snackbar } from 'react-native-paper';
 import SetAddress from './SetAddress.js';
 
 const homePlace =  {
@@ -20,19 +20,30 @@ const workPlace = {
 };
 
 const DestinationSearch = (props) => {
+
+  const [visible, setVisible] = React.useState(false);
+
+    const onToggleSnackBar = () => setVisible(!visible);
+  
+    const onDismissSnackBar = () => setVisible(false);
+
+    const [errorMessage, setErrorMsg] = React.useState('Cant submit empty field');
+
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
 
   const navigation = useNavigation();
 
   const checkNavigation = () => {
-    if (originPlace && destinationPlace) {
+    if (originPlace != null && destinationPlace != null) {
       // console.log(originPlace.data.description);
       
       navigation.navigate('ConfirmPage', {
         originPlace,
         destinationPlace,
       })
+    } else {
+      setVisible(!visible)
     }
   }
 
@@ -43,6 +54,8 @@ const DestinationSearch = (props) => {
   return (
     <SafeAreaView>
       <View>
+
+        
     <View style={{position:'absolute', top: 325, padding: 10, width:'100%'}}>
       <View style={{flexDirection: 'row', alignItems:'center', justifyContent:'space-between', paddingHorizontal: 65}}>
         <Pressable onPress={() => props.navigation.navigate(SetAddress)} style={{flexDirection:'row', alignItems:'center', paddingHorizontal: 5}}>
@@ -69,15 +82,28 @@ const DestinationSearch = (props) => {
 
       </View>
 
+      
+
 
 <View style={{alignItems: 'center', top: 450}}>
-<TouchableOpacity onPress={checkNavigation} style={styles.button}>
+
+            <Snackbar 
+              duration={300} 
+              visible={visible}
+              onDismiss={onDismissSnackBar}
+              style={{backgroundColor:'red', color:'white', borderRadius: 25, alignItems:'center', justifyContent:'center', position: 'absolute', top:Dimensions.get('window').height - 550}}
+              >
+            {errorMessage}
+          </Snackbar>
+                <TouchableOpacity onPress={checkNavigation} style={styles.button}>
                         
                         <Text style={{color: 'teal', fontSize: 15}}>Continue</Text>
                     
                 </TouchableOpacity>
-
+                
           </View>
+
+          
       <View style={{padding: 10}}>
         <Text style={{color: 'teal', fontSize: 22, fontWeight: 'bold'}}>Set Pick Up</Text>
 
@@ -147,6 +173,8 @@ const DestinationSearch = (props) => {
         <View style={styles.square} />
 
       </View>
+      
+      
 
       </View>
                     {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
@@ -154,6 +182,8 @@ const DestinationSearch = (props) => {
                             <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
                         </Pressable>
                     </View> */}
+
+                    
     </SafeAreaView>
   );
 };
