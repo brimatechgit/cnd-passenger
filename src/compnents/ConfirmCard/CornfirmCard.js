@@ -1,12 +1,16 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native';
 import {Card}from 'react-native-paper';
+import  {useNavigation}  from '@react-navigation/native';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import PickUpLocationDetails from '../../screens/DestinationPage/PickUpDetails/PickUpDetails';
 import ConnectDriverPage from '../../screens/SummaryPage/CardDetails/ConfirmPickUpPage/ConnectDriverPage/ConnectDriverPage';
 import styles from './styles';
 
-const ConfirmCard = ({navigation, origin, destination, or}) => {
+const ConfirmCard = ({origin, destination, or, props}) => {
+
+    const navigation = useNavigation();
+
     return ( 
         <View style={styles.container}>
             <View style={{alignItems:'center'}}>
@@ -44,13 +48,23 @@ const ConfirmCard = ({navigation, origin, destination, or}) => {
 
                 <View style={{height: 5}}></View>
 
+
+                <TouchableOpacity onPress={() => {navigation.navigate(PickUpLocationDetails)}} style={[styles.button, {margin:5}]}>
+                        
+                                        <Text style={{color: 'teal', fontSize: 15}}>Yes, Cancel</Text>
+                                    
+                                    </TouchableOpacity>
+
                 {/* props.navigation.navigate(PickUpLocationDetails) */}
 
-                    <TouchableOpacity onPress={() => navigation.navigate(PickUpLocationDetails)} style={styles.button}>
+                    {/* <Pressable onPress={() => console.log('tesssst')} style={styles.button}>
                     
                             <Text style={{color: 'teal', fontSize: 15}}>Confirm</Text>
                         
-                    </TouchableOpacity>
+                    </Pressable> */}
+
+                    {/* <Button text='Continue' navPage='' ></Button> */}
+                    
             
         </View>
      );

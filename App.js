@@ -42,6 +42,7 @@ import SplashPage from './src/screens/LandingPage/splashScreen/splashPage';
 import { TransitionPresets } from '@react-navigation/stack';
 import SetAddress from './src/screens/DestinationPage/SetAddress';
 import InviteTermsPage from './src/screens/AccountPage/inviteFriends/inviteTerms';
+import * as Location from 'expo-location';
 
 
 const Stack = createNativeStackNavigator();
@@ -102,7 +103,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="SplashPage"
+      initialRouteName="LandingPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}

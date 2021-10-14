@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Text, TextInput, Pressable, Image } from 'react-native';
 import {Card, Snackbar}from 'react-native-paper';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import  IconIon  from 'react-native-vector-icons/Ionicons';
@@ -148,8 +148,33 @@ const CardDetailsPage = props => {
                         </View>
                         
                             
-                        <Text style={{color: 'teal', fontSize: 12,alignItems: 'center'}}>Secured with SSL encryption technology</Text>
+                        <Text style={{color: 'teal', fontSize: 12,alignItems: 'center',}}>Secured with SSL encryption technology</Text>
                     </View>
+
+                    <View style={{flexDirection:'row', padding:15, alignItems:'center'}}>
+                                            <Image 
+                        style={{flex: 1, width:20, height: 18,}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/payment/Visa.png')} />
+                                            <Image 
+                        style={{flex: 1, width:20, height: 18}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/payment/Express.png')} />
+                                            <Image 
+                        style={{flex: 1, width:20, height: 18}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/payment/Mastercard.png')} />
+                                            <Image 
+                        style={{flex: 1, width:20, height: 30}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/payment/MasterCardSecure.png')} />
+                                            <Image 
+                        style={{flex: 1, width:20, height: 30}}
+                        resizeMode = 'contain'
+                        source={require('../../../assets/images/payment/VerifiedVisa.png')} />
+                    </View>
+                    
+                   
 
 
                     {/* <Snackbar

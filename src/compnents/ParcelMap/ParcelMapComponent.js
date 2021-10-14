@@ -32,9 +32,9 @@ const ParcelMapComponent = props => {
         
         
             </MapView>
-            <TouchableOpacity style={styles.overlay} onPress={() => props.navigation.navigate(AccountPage)}>
+            {/* <TouchableOpacity style={styles.overlay} onPress={() => props.navigation.navigate(AccountPage)}>
               <Icon name='menu' size={35} color='white'></Icon>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
         </View>
      );

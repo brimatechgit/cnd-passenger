@@ -20,7 +20,7 @@ const BottomHomeNav = ({navigation}) => {
             
 
                     {/* <TouchableOpacity onPress={() => navigation.navigate(DestinationSearch)} style={styles.button}>
-                    {/* navigation.navigate(DestinationSearch) 
+                     {/* navigation.navigate(DestinationSearch)  
                             <Text style={{color: 'teal', fontSize: 15}}>Where Are You?</Text>
                         
                     </TouchableOpacity> */}

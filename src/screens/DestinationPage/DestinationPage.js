@@ -9,6 +9,8 @@ import PickUpLocationDetails from './PickUpDetails/PickUpDetails.js';
 import ConfirmPage from './ConfirmPage/ConfirmPage.js';
 import { Card, Snackbar } from 'react-native-paper';
 import SetAddress from './SetAddress.js';
+import Geolocation from 'react-native-geolocation-service';
+
 
 const homePlace =  {
   description: 'Home',
@@ -41,6 +43,7 @@ const DestinationSearch = (props) => {
       navigation.navigate('ConfirmPage', {
         originPlace,
         destinationPlace,
+        
       })
     } else {
       setVisible(!visible)

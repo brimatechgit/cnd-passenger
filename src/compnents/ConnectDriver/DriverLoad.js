@@ -11,7 +11,7 @@ const DriverLoad = () => {
     
 
     return ( 
-        <View style={[styles.container, {height: '15%', top: '85%'}]}>
+        <View style={[styles.container, {height: '35%', top: '85%'}]}>
             <View style={{alignItems:'center', flexDirection:'row', top: '10%'}}>
                 {/* get username here */}
                 {/* <AnimatedLoader

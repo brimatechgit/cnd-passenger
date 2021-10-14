@@ -1,12 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { View, Text, Pressable, Image } from 'react-native';
 import Card from 'react-native-paper';
 import Button from '../../compnents/Button/Button';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import styles from './styles';
+import * as Location from 'expo-location';
 
 const LandingPage = props => {
+
+    const [location, setLocation] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location was denied');
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+    })();
+  }, []);
+
+  let text = 'Waiting..';
+  if (errorMsg) {
+    text = errorMsg;
+  } else if (location) {
+    text = JSON.stringify(location);
+  }
+
+
     return ( 
         <View style={{flex: 1, alignItems:'center', padding:20}}>
             <View style={{height: '80%', alignItems: 'center', justifyContent: 'center'}}>
