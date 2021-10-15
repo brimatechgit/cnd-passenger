@@ -49,7 +49,7 @@ const RequestCard = props => {
       const validator = () => {
         
             if(parcel != 'none'){
-                props.navigation.navigate(SummaryPage)
+                props.navigation.navigate("SummaryPage")
             }else {
               // setErrorMsg('street name and num not given');
               setVisible(!visible)

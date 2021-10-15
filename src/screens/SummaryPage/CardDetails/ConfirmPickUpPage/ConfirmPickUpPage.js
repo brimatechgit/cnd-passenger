@@ -16,7 +16,7 @@ const ConfirmPickUpPage = ({navigation}) => {
 
      useEffect(() => {
         setTimeout(() => {
-            navigation.navigate(ConnectDriverPage)
+            navigation.navigate("ConnectDriverPage")
         }, 5000);
       }, []);
 

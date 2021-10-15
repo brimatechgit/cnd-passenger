@@ -98,7 +98,7 @@ source={require('../../assets/images/AddPayment.png')} />
                         <Text style={{color: 'grey', fontWeight:'600', fontSize: 12}}>Credit / Debit Card</Text>
                     </View>
                     <Card style={{...styles.circularIcon, width: 25, height: 25}}>
-                        <Pressable onPress={() => props.navigation.navigate(CardDetailsPage)} style={{justifyContent: 'center', alignItems: 'center', top: 6}}>
+                        <Pressable onPress={() => props.navigation.navigate("CardDetailsPage")} style={{justifyContent: 'center', alignItems: 'center', top: 6}}>
 
                             <Icon name='plus' size={15}></Icon>
                         </Pressable>

@@ -28,6 +28,7 @@ const ConfirmMap = props => {
             style={{width: '100%', height: '100%'}}
       provider={PROVIDER_GOOGLE}
       showsUserLocation={true}
+      apikey={'AIzaSyCSH6EQada1HpeyGTMQMaEI8rKdgd6QhMc'} // insert your API Key here
       initialRegion={{ 
         latitude: coordinates[0].latitude,
         longitude: coordinates[0].longitude,
@@ -63,7 +64,7 @@ const ConfirmMap = props => {
         
         
             </MapView>
-            <TouchableOpacity style={styles.overlay} onPress={() => props.navigation.navigate(AccountPage)}>
+            <TouchableOpacity style={styles.overlay} onPress={() => props.navigation.navigate("AccountPage")}>
               <Icon name='menu' size={35} color='white'></Icon>
             </TouchableOpacity>
 

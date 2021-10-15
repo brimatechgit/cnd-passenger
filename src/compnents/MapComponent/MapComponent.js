@@ -46,7 +46,9 @@ export class MapComponent extends Component {
         <MapView
           style={styles.map}
           initialRegion={region}
+          provider={PROVIDER_GOOGLE}
           onRegionChangeComplete={this.onRegionChange}
+          apikey={'AIzaSyCSH6EQada1HpeyGTMQMaEI8rKdgd6QhMc'} // insert your API Key here
         />
         <View style={styles.markerFixed}>
         <Image 

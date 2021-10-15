@@ -32,7 +32,9 @@ const CardDetailsPage = props => {
     const validator = () => {
         
         if(cvv != '' && expDate != '' && cardNum != '' && cardName != ''){
-            props.navigation.navigate(SummaryPage)
+            props.navigation.navigate("ConfirmPickUpPage")
+            //integrate paygate  payments here
+
         }else {
           // setErrorMsg('street name and num not given');
           setVisible(!visible)
@@ -138,7 +140,12 @@ const CardDetailsPage = props => {
                         </Pressable>
                     </View> */}
 
-                    <Button text='Proceed to Pay' navPage='ConfirmPickUpPage' navigation={props.navigation}/>
+                        <Pressable style={[styles.button, {justifyContent:'center', alignItems:'center'}]} onPress={validator}>
+                       
+                            <Text style={{color: 'teal', fontSize: 20}}>Proceed to Pay</Text>
+                        </Pressable>
+
+                    {/* <Button text='Proceed to Pay' navPage='ConfirmPickUpPage' navigation={props.navigation}/> */}
 
                     <View style={{height: 15}}></View>
                     <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>

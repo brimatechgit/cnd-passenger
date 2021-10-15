@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native';
-import {Card}from 'react-native-paper';
+import {Button, Card}from 'react-native-paper';
 import  {useNavigation}  from '@react-navigation/native';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import PickUpLocationDetails from '../../screens/DestinationPage/PickUpDetails/PickUpDetails';
@@ -43,25 +43,29 @@ const ConfirmCard = ({origin, destination, or, props}) => {
                             
                         </View>
                 </Card>
-                    
+                
                 </View>
+                
+                {/* <Button style={{}} onPress={()=> navigation.navigate("PickUpLocationDetails")}>test mee</Button> */}
 
                 <View style={{height: 5}}></View>
 
 
-                <TouchableOpacity onPress={() => {navigation.navigate(PickUpLocationDetails)}} style={[styles.button, {margin:5}]}>
+
+
+                {/* <TouchableOpacity onPress={() => {navigation.navigate(PickUpLocationDetails)}} style={[styles.button, {margin:5}]}>
                         
                                         <Text style={{color: 'teal', fontSize: 15}}>Yes, Cancel</Text>
                                     
-                                    </TouchableOpacity>
+                                    </TouchableOpacity> */}
 
                 {/* props.navigation.navigate(PickUpLocationDetails) */}
 
-                    {/* <Pressable onPress={() => console.log('tesssst')} style={styles.button}>
+                    <Pressable onPress={() => navigation.navigate("PickUpLocationDetails")} style={styles.button}>
                     
                             <Text style={{color: 'teal', fontSize: 15}}>Confirm</Text>
                         
-                    </Pressable> */}
+                    </Pressable>
 
                     {/* <Button text='Continue' navPage='' ></Button> */}
                     

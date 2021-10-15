@@ -53,14 +53,14 @@ const PickUpLocationDetails = props => {
       const validator = () => {
           if(value == 'House'){
               if(streetName != ''){
-                props.navigation.navigate(DropOffDetails)
+                props.navigation.navigate("DropOffDetails")
               }else {
                 // setErrorMsg('street name and num not given');
                 setVisible(!visible)
               }
           } else {
               if(streetName != '' && complex != ''){
-                props.navigation.navigate(DropOffDetails)
+                props.navigation.navigate("DropOffDetails")
               } else {  
                 // setErrorMsg('Cant submit empty field');
                 setVisible(!visible)
@@ -177,7 +177,7 @@ const PickUpLocationDetails = props => {
                                 <Text style={{alignItems: 'center', justifyContent: 'center', paddingRight: 20, left: 10, color: 'teal'}}>Add Pick Up Instructions</Text>
                             </View>
                            
-                            <Pressable onPress={() => props.navigation.navigate(PickUpInstructions)} >
+                            <Pressable onPress={() => props.navigation.navigate("PickUpInstructions")} >
                             <Image 
                             style={{width:35, height:35 }}
                             resizeMode = 'contain'
