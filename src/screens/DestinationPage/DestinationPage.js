@@ -88,13 +88,13 @@ const DestinationSearch = (props) => {
       
 
 
-<View style={{alignItems: 'center', top: 450}}>
+<View style={{alignItems: 'center', top: Dimensions.get('window').height - 350}}>
 
             <Snackbar 
               duration={300} 
               visible={visible}
               onDismiss={onDismissSnackBar}
-              style={{backgroundColor:'red', color:'white', borderRadius: 25, alignItems:'center', justifyContent:'center', position: 'absolute', top:Dimensions.get('window').height - 550}}
+              style={{backgroundColor:'red', color:'white', borderRadius: 25, alignItems:'center', justifyContent:'center', position: 'absolute', top:Dimensions.get('window').height - 650}}
               >
             {errorMessage}
           </Snackbar>

@@ -114,6 +114,20 @@ const styles = StyleSheet.create({
     subTitle: {
         fontSize: 15,
         color: 'teal'
+    },
+
+    tncText: {
+        textAlign:'center'
+    }, 
+
+    tncListItems: {
+        padding:5
+    },
+
+    sectionHeader: {
+        fontWeight: '700',
+        textAlign:'center',
+        fontSize:15
     }
 
 })

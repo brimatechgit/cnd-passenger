@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, TextInput, Pressable, Image } from 'react-native';
-import {Card, Snackbar}from 'react-native-paper';
+import { View, Text, TextInput, Pressable, Image, Dimensions } from 'react-native';
+import {Button, Card, Snackbar}from 'react-native-paper';
 import  Icon  from 'react-native-vector-icons/MaterialIcons';
 import  IconIon  from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -10,7 +10,7 @@ import BottomHomeNav from '../../../compnents/BottomHomeNav/BottomHomeNav';
 import ConfirmCard from '../../../compnents/ConfirmCard/CornfirmCard';
 import ConfirmPickUp from '../../../compnents/ConfirmPickUp/ConfirmPickUp';
 import ConfirmPickUpPage from './ConfirmPickUpPage/ConfirmPickUpPage';
-import Button from '../../../compnents/Button/Button';
+// import Button from '../../../compnents/Button/Button';
 
 
 
@@ -128,6 +128,7 @@ const CardDetailsPage = props => {
 
                 <View style={{alignItems: 'center'}}>
                     <Text style={{color: 'teal', fontSize: 10,alignItems: 'center'}}>We need to verify your card on your banking App</Text>
+                    <Pressable onPress={() => props.navigation.navigate("CardTnC")} style={{ padding: 5, alignItems:'center', justifyContent:'center'}}><Text style={{color: 'teal', fontSize: 15,alignItems: 'center'}}>Terms and conditions</Text></Pressable>
 
                 </View>
             </Card>
@@ -140,10 +141,15 @@ const CardDetailsPage = props => {
                         </Pressable>
                     </View> */}
 
-                        <Pressable style={[styles.button, {justifyContent:'center', alignItems:'center'}]} onPress={validator}>
+                    
+
+                        <Button onPress={validator} style={{backgroundColor:'white', borderRadius:25, borderColor:'teal', borderWidth:1, color:'teal', width:Dimensions.get('window').width - 180, left:Dimensions.get('window').width - 310}}> <Text style={{color: 'teal', fontSize: 20, alignItems:'center'}}>Proceed to Pay</Text></Button>
+
+
+                        {/* <Pressable style={[styles.button]} onPress={validator}>
                        
-                            <Text style={{color: 'teal', fontSize: 20}}>Proceed to Pay</Text>
-                        </Pressable>
+                            <Text style={{color: 'teal', fontSize: 20, alignItems:'center'}}>Proceed to Pay</Text>
+                        </Pressable> */}
 
                     {/* <Button text='Proceed to Pay' navPage='ConfirmPickUpPage' navigation={props.navigation}/> */}
 

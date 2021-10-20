@@ -144,9 +144,8 @@ source={require('../../assets/images/CNDMOTOR.png')} />
                             hasBackdrop={false}
                         >
                             <View style={{
-                                left: 10,
-                                height: 300,
-                                width: 300,
+                                height: Dimensions.get('window').height - 500,
+                                width: Dimensions.get('window').width - 500,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 borderColor: '#ccc',
@@ -194,9 +193,8 @@ source={require('../../assets/images/CNDMOTOR.png')} />
                             hasBackdrop={false}
                         >
                             <View style={{
-                                left: 10,
-                                height: 300,
-                                width: 300,
+                                height: Dimensions.get('window').height - 500,
+                                width: Dimensions.get('window').width - 500,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 borderColor: '#ccc',

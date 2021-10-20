@@ -167,7 +167,7 @@ const PickUpLocationDetails = props => {
 
 
                         
-                        <View style={{flexDirection: 'row',alignItems: 'center', padding: 10, }}>
+                        <View style={{flexDirection: 'row',alignItems: 'center', padding: 10, justifyContent:'center'}}>
                         <Image 
                             style={{width:45, height:45 }}
                             resizeMode = 'contain'

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable, CheckBox,Image, } from 'react-native';
+import { View, Text, TextInput, Pressable, CheckBox,Image, Dimensions, } from 'react-native';
 import {Card} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -11,7 +11,7 @@ import Button from '../../compnents/Button/Button';
 
 const LoginPage = props => {
 
-    const [mobile, onChangeMobile] = React.useState('');
+    const [mobile, onChangeMobile] = React.useState();
     const [isSelected, setSelection] = useState(false);
 
 
@@ -40,11 +40,11 @@ const LoginPage = props => {
             </View>
             <View style={{height: 15}}></View>
 
-            <Card style={{elevation: 5, borderRadius: 25}}>
+            <Card style={{elevation: 5, borderRadius: 25, width:Dimensions.get('window').width}}>
             <View style={{flexDirection: 'row'}}>
 
             <DropDownPicker
-                            style={{width: 80, borderWidth: 0, borderRadius: 25}}
+                            style={{borderWidth: 0, borderRadius: 25}}
                                 open={open}
                                 value={value}
                                 items={items}
@@ -56,10 +56,10 @@ const LoginPage = props => {
             <TextInput
                                     style={{borderBottomColor: 'teal',
                                     borderWidth: 0,
-                                    width: 100,
+                                    width: 150,
                                     paddingBottom: 5,
                                     margin: 10,
-                                right: 250}}
+                                right: 200}}
                                     onChange={onChangeMobile}
                                     value={mobile}
                                     placeholder='Mobile' 

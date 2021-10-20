@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Pressable, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
 import  Icon  from 'react-native-vector-icons/Ionicons';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Modal from "react-native-modal";
 import styles from './styles';
 import HomePage from '../../screens/HomePage/HomePage';
 import ChatPage from './ChatPage/ChatPage';
+import { IconButton } from 'react-native-paper';
 
 const ConnectDriver = (props) => {
 
@@ -20,7 +21,7 @@ const ConnectDriver = (props) => {
         setModalVisible(!isModalVisible);
     }
     const toggleChat = () => {
-        setChatState(!chatState);
+       setChatVisible(!isChatVisible)
     }
 
     const [open, setOpen] = useState(false);
@@ -41,9 +42,9 @@ const ConnectDriver = (props) => {
     return ( 
         <View style={styles.container}>
 
-            {
+            {/* {
                 chatState ? chatPage : <View></View>
-            }
+            } */}
             
             <View></View>
             <View style={{flexDirection:'row', paddingTop: 25}}>
@@ -79,9 +80,8 @@ const ConnectDriver = (props) => {
                             hasBackdrop={false}
                         >
                             <View style={{
-                                left: 10,
-                                height: 300,
-                                width: 300,
+                                 height: Dimensions.get('window').height - 500,
+                                 width: Dimensions.get('window').width - 500,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 borderColor: '#ccc',
@@ -96,7 +96,7 @@ const ConnectDriver = (props) => {
                                     <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red'}}>Cancel Your Pick up</Text>
 
                                     <Text style={{textAlign:'center'}}>
-                                        Are you sure you want to Cancel Your Pick up with John?
+                                        Are you sure you want to Cancel Your Pick up with {props.name}?
                                     </Text>
                                     
                                     <View style={{ paddingTop:10}}>
@@ -139,27 +139,33 @@ const ConnectDriver = (props) => {
             
             <Modal isVisible={isChatVisible}
                             hasBackdrop={false}
+                            style
                         >
-                            <View style={{
+                            <ScrollView style={{
+                                top:Dimensions.get('window').height - 300,
                                 height: 300,
-                                width: 300,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                borderColor: '#ccc',
+                                width: Dimensions.get('window').width - 45,
+                                
                                 position: 'absolute',
-                                borderWidth: 1,
-                                borderStyle: 'solid',
                                 backgroundColor: 'white',
                                 elevation: 20,
                                 padding: 15,
                                 borderRadius: 25,
                             }}>
 
-
                                 
+                                <IconButton onPress={toggleChat} icon='close' size={20} style={{justifyContent:'flex-end', alignItems:'flex-end', left: Dimensions.get('window').width - 120}}></IconButton>
+
+                                <View>
+                                    {/* DRIVER user chats go here */}
+
+                                    <Text>Test chat here</Text>
+
+                                </View>
+
                                     
 
-                            </View>
+                            </ScrollView>
 
 
                     

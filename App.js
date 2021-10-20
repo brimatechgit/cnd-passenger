@@ -43,6 +43,7 @@ import { TransitionPresets } from '@react-navigation/stack';
 import SetAddress from './src/screens/DestinationPage/SetAddress';
 import InviteTermsPage from './src/screens/AccountPage/inviteFriends/inviteTerms';
 import * as Location from 'expo-location';
+import CardTnC from './src/screens/SummaryPage/CardDetails/CardTnC';
 
 
 const Stack = createNativeStackNavigator();
@@ -103,7 +104,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="LandingPage"
+      initialRouteName="RegisterPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}
@@ -136,6 +137,7 @@ export default function App() {
         <Stack.Screen name="VerifyNumber" component={VerifyNumber} />
         <Stack.Screen name="AccountCardDetailsPage" component={AccountCardDetailsPage} />
         <Stack.Screen name="PromotionPage" component={PromotionPage} />
+        <Stack.Screen name="CardTnC" component={CardTnC} />
         <Stack.Screen name="InviteFriendsPage" component={InviteFriendsPage} />
         <Stack.Screen name="InviteTermsPage" component={InviteTermsPage} />
         <Stack.Screen options={{headerShown: false}} name="SplashPage"  component={SplashPage} />

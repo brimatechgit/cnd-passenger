@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable,Image } from 'react-native';
+import { View, Text, TextInput, Pressable,Image, Dimensions } from 'react-native';
 import {Card, Snackbar} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker'
 import styles from './styles';
@@ -190,7 +190,7 @@ const DropOffDetails = props => {
                     </View> */}
 
 
-                    <View style={{flexDirection: 'row',alignItems: 'center', padding: 10, }}>
+                    <View style={{flexDirection: 'row',alignItems: 'center', padding: 10,justifyContent:'center' }}>
                         <Image 
                             style={{width:45, height:45 }}
                             resizeMode = 'contain'
