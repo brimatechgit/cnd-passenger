@@ -32,7 +32,8 @@ const CardDetailsPage = props => {
     const validator = () => {
         
         if(cvv != '' && expDate != '' && cardNum != '' && cardName != ''){
-            props.navigation.navigate("ConfirmPickUpPage")
+            // props.navigation.navigate("ConfirmPickUpPage")
+            props.navigation.navigate("PaymentPage")
             //integrate paygate  payments here
 
         }else {
@@ -143,7 +144,7 @@ const CardDetailsPage = props => {
 
                     
 
-                        <Button onPress={validator} style={{backgroundColor:'white', borderRadius:25, borderColor:'teal', borderWidth:1, color:'teal', width:Dimensions.get('window').width - 180, left:Dimensions.get('window').width - 310}}> <Text style={{color: 'teal', fontSize: 20, alignItems:'center'}}>Proceed to Pay</Text></Button>
+                        <Button onPress={validator} style={{backgroundColor:'white', borderRadius:25, borderColor:'teal', borderWidth:1, color:'teal', marginLeft:25, marginRight:25}}> <Text style={{color: 'teal', fontSize: 20, alignItems:'center'}}>Proceed to Pay</Text></Button>
 
 
                         {/* <Pressable style={[styles.button]} onPress={validator}>

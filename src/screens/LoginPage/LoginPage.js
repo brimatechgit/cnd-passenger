@@ -11,7 +11,7 @@ import Button from '../../compnents/Button/Button';
 
 const LoginPage = props => {
 
-    const [mobile, onChangeMobile] = React.useState();
+    const [mobile, onChangeMobile] = React.useState('');
     const [isSelected, setSelection] = useState(false);
 
 
@@ -40,7 +40,7 @@ const LoginPage = props => {
             </View>
             <View style={{height: 15}}></View>
 
-            <Card style={{elevation: 5, borderRadius: 25, width:Dimensions.get('window').width}}>
+            <Card style={{elevation: 5, borderRadius: 25, width:Dimensions.get('window').width- 450}}>
             <View style={{flexDirection: 'row'}}>
 
             <DropDownPicker
@@ -56,7 +56,7 @@ const LoginPage = props => {
             <TextInput
                                     style={{borderBottomColor: 'teal',
                                     borderWidth: 0,
-                                    width: 150,
+                                    width: 520,
                                     paddingBottom: 5,
                                     margin: 10,
                                 right: 200}}

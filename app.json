@@ -2,9 +2,9 @@
   "expo": {
     "name": "ClicknDeliver",
     "slug": "cnd-passenger",
-    "version": "2.1.0",
+    "version": "2.5.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon2.png",
     "splash": {
       "image": "./assets/splash2.png",
       "resizeMode": "contain",
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "versionCode": 3
+      "versionCode": 5
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -44,6 +44,7 @@ import SetAddress from './src/screens/DestinationPage/SetAddress';
 import InviteTermsPage from './src/screens/AccountPage/inviteFriends/inviteTerms';
 import * as Location from 'expo-location';
 import CardTnC from './src/screens/SummaryPage/CardDetails/CardTnC';
+import PaymentPage from './src/screens/SummaryPage/CardDetails/paymentPage/PaymentPage';
 
 
 const Stack = createNativeStackNavigator();
@@ -104,7 +105,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="RegisterPage"
+      initialRouteName="CardDetailsPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}
@@ -145,6 +146,7 @@ export default function App() {
         <Stack.Screen name="PromoPage" component={PromoPage} />
         <Stack.Screen name="SetAddress" component={SetAddress} />
         <Stack.Screen name="ChangePassword" component={ChangePassword} />
+        <Stack.Screen name="PaymentPage" component={PaymentPage} />
         <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={AccountPage} />
       </Stack.Navigator>
     </NavigationContainer>

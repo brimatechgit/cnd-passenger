@@ -197,7 +197,7 @@ const DropOffDetails = props => {
                             source={require('../../../assets/images/document.png')} />
                             
                             <View style={{paddingHorizontal: 10}}>
-                                <Text style={{alignItems: 'center', justifyContent: 'center', paddingRight: 20, left: 10, color: 'teal'}}>Add Pick Up Instructions</Text>
+                                <Text style={{alignItems: 'center', justifyContent: 'center', paddingRight: 20, left: 10, color: 'teal'}}>Add Drop Up Instructions</Text>
                             </View>
                            
                             <Pressable onPress={() => props.navigation.navigate("DropOffInstruction")} >
